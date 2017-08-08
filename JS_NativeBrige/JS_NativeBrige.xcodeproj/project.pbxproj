@@ -15,6 +15,8 @@
 		175572BB1F394BC300155BCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572BA1F394BC300155BCE /* main.m */; };
 		175572C51F394BC400155BCE /* JS_NativeBrigeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572C41F394BC400155BCE /* JS_NativeBrigeTests.m */; };
 		175572D01F394BC400155BCE /* JS_NativeBrigeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572CF1F394BC400155BCE /* JS_NativeBrigeUITests.m */; };
+		175572E01F394FA500155BCE /* LSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572DF1F394FA500155BCE /* LSWebViewController.m */; };
+		175572E71F39503D00155BCE /* LSDataBrigeManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572E61F39503D00155BCE /* LSDataBrigeManger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		175572CB1F394BC400155BCE /* JS_NativeBrigeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JS_NativeBrigeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		175572CF1F394BC400155BCE /* JS_NativeBrigeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JS_NativeBrigeUITests.m; sourceTree = "<group>"; };
 		175572D11F394BC400155BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		175572DE1F394FA500155BCE /* LSWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSWebViewController.h; sourceTree = "<group>"; };
+		175572DF1F394FA500155BCE /* LSWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSWebViewController.m; sourceTree = "<group>"; };
+		175572E51F39503D00155BCE /* LSDataBrigeManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDataBrigeManger.h; sourceTree = "<group>"; };
+		175572E61F39503D00155BCE /* LSDataBrigeManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDataBrigeManger.m; sourceTree = "<group>"; };
+		175572E91F3950A300155BCE /* LSBrigeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBrigeProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 		175572AA1F394BC300155BCE /* JS_NativeBrige */ = {
 			isa = PBXGroup;
 			children = (
+				175572DD1F394D5E00155BCE /* JS_NativeBrige */,
 				175572AB1F394BC300155BCE /* AppDelegate.h */,
 				175572AC1F394BC300155BCE /* AppDelegate.m */,
 				175572AE1F394BC300155BCE /* ViewController.h */,
@@ -130,6 +138,26 @@
 				175572D11F394BC400155BCE /* Info.plist */,
 			);
 			path = JS_NativeBrigeUITests;
+			sourceTree = "<group>";
+		};
+		175572DD1F394D5E00155BCE /* JS_NativeBrige */ = {
+			isa = PBXGroup;
+			children = (
+				175572E11F394FE200155BCE /* JS_NativeBrige */,
+				175572DE1F394FA500155BCE /* LSWebViewController.h */,
+				175572DF1F394FA500155BCE /* LSWebViewController.m */,
+			);
+			path = JS_NativeBrige;
+			sourceTree = "<group>";
+		};
+		175572E11F394FE200155BCE /* JS_NativeBrige */ = {
+			isa = PBXGroup;
+			children = (
+				175572E91F3950A300155BCE /* LSBrigeProtocol.h */,
+				175572E51F39503D00155BCE /* LSDataBrigeManger.h */,
+				175572E61F39503D00155BCE /* LSDataBrigeManger.m */,
+			);
+			path = JS_NativeBrige;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175572E01F394FA500155BCE /* LSWebViewController.m in Sources */,
 				175572B01F394BC300155BCE /* ViewController.m in Sources */,
+				175572E71F39503D00155BCE /* LSDataBrigeManger.m in Sources */,
 				175572BB1F394BC300155BCE /* main.m in Sources */,
 				175572AD1F394BC300155BCE /* AppDelegate.m in Sources */,
 			);
