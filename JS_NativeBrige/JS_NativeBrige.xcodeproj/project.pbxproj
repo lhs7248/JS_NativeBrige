@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172693ED1F39AE7B0081785B /* LSOpenBrowerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */; };
 		175572AD1F394BC300155BCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572AC1F394BC300155BCE /* AppDelegate.m */; };
 		175572B01F394BC300155BCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572AF1F394BC300155BCE /* ViewController.m */; };
 		175572B31F394BC300155BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175572B11F394BC300155BCE /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		172693EB1F39AE7B0081785B /* LSOpenBrowerPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSOpenBrowerPlugin.h; sourceTree = "<group>"; };
+		172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSOpenBrowerPlugin.m; sourceTree = "<group>"; };
 		175572A81F394BC300155BCE /* JS_NativeBrige.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JS_NativeBrige.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175572AB1F394BC300155BCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		175572AC1F394BC300155BCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172693E71F39AA4C0081785B /* JS_NativeBrigePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				172693EB1F39AE7B0081785B /* LSOpenBrowerPlugin.h */,
+				172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */,
+			);
+			path = JS_NativeBrigePlugin;
+			sourceTree = "<group>";
+		};
 		1755729F1F394BC300155BCE = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +155,10 @@
 		175572DD1F394D5E00155BCE /* JS_NativeBrige */ = {
 			isa = PBXGroup;
 			children = (
-				175572E11F394FE200155BCE /* JS_NativeBrige */,
 				175572DE1F394FA500155BCE /* LSWebViewController.h */,
 				175572DF1F394FA500155BCE /* LSWebViewController.m */,
+				175572E11F394FE200155BCE /* JS_NativeBrige */,
+				172693E71F39AA4C0081785B /* JS_NativeBrigePlugin */,
 			);
 			path = JS_NativeBrige;
 			sourceTree = "<group>";
@@ -294,6 +307,7 @@
 				175572B01F394BC300155BCE /* ViewController.m in Sources */,
 				175572E71F39503D00155BCE /* LSDataBrigeManger.m in Sources */,
 				175572BB1F394BC300155BCE /* main.m in Sources */,
+				172693ED1F39AE7B0081785B /* LSOpenBrowerPlugin.m in Sources */,
 				175572AD1F394BC300155BCE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

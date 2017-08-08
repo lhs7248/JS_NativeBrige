@@ -15,7 +15,7 @@
 - (NSString *)scriptMessageHandlerName;
 
 // 客户端接收到js方法的回调
-- (NSString *)browser:(id)browser didReceiveScriptMessage:(id)message;
+- (void )browser:(id)browser didReceiveScriptMessage:(id)message;
 
 
 @end

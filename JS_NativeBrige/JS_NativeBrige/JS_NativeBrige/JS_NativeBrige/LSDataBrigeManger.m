@@ -8,7 +8,9 @@
 
 #import "LSDataBrigeManger.h"
 #import <JavaScriptCore/JavaScriptCore.h>
-
+#import <WebKit/WebKit.h>
+// :: Other ::
+#import "LSOpenBrowerPlugin.h"
 
 @interface LSDataBrigeManger()<WKScriptMessageHandler>
 
@@ -41,6 +43,8 @@
         if (webVC.webView) {
             self.messageHandlers = [NSMutableDictionary dictionary];
         }
+        
+        [self changeNavigatorUserAgent];
         
     }
     return self;
@@ -102,6 +106,27 @@
         JSContext *context = self.jsContext;
         context[@"webkit"] = self.fakeJSWebKit;
     }
+}
+
+// 修改 default userAgent
+
+
+-(void)changeNavigatorUserAgent{
+   
+    //get the original user-agent of webview
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+    NSString *oldAgent = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
+    
+    //add my info to the new agent
+    if ([oldAgent rangeOfString:@"app=Loan,version"].length>0) {
+        return;
+    }
+    NSString *currentVersion = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
+    NSString *newAgent = [oldAgent stringByAppendingFormat:@"; app=Loan,version=%@",currentVersion];
+    
+    //regist the new agent
+    NSDictionary *dictionnary = [[NSDictionary alloc] initWithObjectsAndKeys:newAgent, @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
 }
 
 #pragma mark - Getters & Setters

@@ -10,6 +10,8 @@
 #import <WebKit/WebKit.h>
 
 
+
+
 @interface LSWebViewController : UIViewController
 
 //提供的WebView
@@ -19,5 +21,24 @@
 @property(nonatomic,strong) WKWebView * wkWebView;
 
 
+@property (nonatomic, copy) NSString *backURL;
+//@property (nonatomic, weak) id <KINWebBrowserDelegate> delegate;
+
+// Load a NSURLURLRequest to web view
+// Can be called any time after initialization
+- (void)loadRequest:(NSURLRequest *)request;
+
+// Load a NSURL to web view
+// Can be called any time after initialization
+- (void)loadURL:(NSURL *)URL;
+
+// Loads a URL as NSString to web view
+// Can be called any time after initialization
+- (void)loadURLString:(NSString *)URLString;
+
+
+// Loads an string containing HTML to web view
+// Can be called any time after initialization
+- (void)loadHTMLString:(NSString *)HTMLString;
 @end
 
