@@ -200,7 +200,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 //            return NO;
 //        }
     }
-    return NO;
+    return YES;
 }
 
 // 网页开始加载后，注入交互方式

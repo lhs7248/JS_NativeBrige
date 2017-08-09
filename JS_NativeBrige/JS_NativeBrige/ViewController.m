@@ -20,7 +20,7 @@
 - (IBAction)webViewAction:(id)sender {
     
     
-    LSWebViewController * WebVC = [LSWebViewController webBrowserWithConfiguration:YES];
+    LSWebViewController * WebVC = [LSWebViewController webBrowserWithConfiguration:NO];
     
     [self pushWebVC:WebVC];
     
