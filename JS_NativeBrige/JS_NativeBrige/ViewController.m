@@ -11,6 +11,7 @@
 
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -42,8 +43,13 @@
                                                        error:nil];
 
 
-//    [webVC loadHTMLString:htmlCont];
-    [webVC loadHTMLString:htmlCont baseURl:baseURL];
+    if (self.textField.text.length == 0) {
+        
+        [webVC loadHTMLString:htmlCont baseURl:baseURL];
+    }else{
+        
+        [webVC loadURLString:self.textField.text];
+    }
     [self.navigationController pushViewController:webVC animated:YES];
     
 }
@@ -61,6 +67,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+   
+    [self.textField resignFirstResponder];
+}
 
 @end

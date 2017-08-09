@@ -84,6 +84,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     self.pluginManager = [[LSDataBrigeManger alloc] initWithWebVC:self];
     
     if(self.wkWebView) {
+        self.navigationItem.title = @"wkWebView";
         [self.wkWebView setFrame:self.view.bounds];
         [self.wkWebView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [self.wkWebView setNavigationDelegate:self];
@@ -96,6 +97,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         [_pluginManager addDefaultPlugins];
     }
     else if(self.webView) {
+        
+        self.navigationItem.title = @"webView";
         [self.webView setFrame:self.view.bounds];
         [self.webView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [self.webView setDelegate:self];
@@ -155,9 +158,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 - (void)loadURL:(NSURL *)URL {
     // webview的请求url添加token字段
     NSString *urlString = URL.absoluteString;
-//    NSString *urlStringWithToken = [urlString ln_processedUrlWithToken:[LNUserManager sharedInstance].userInfo.token];
     
-//    [self loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStringWithToken]]];
+    [self loadRequest:[NSURLRequest requestWithURL:URL]];
 }
 
 

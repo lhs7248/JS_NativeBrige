@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,17 +32,32 @@
                                     <action selector="wkWebViewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFW-Uw-GX9"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gek-ac-Lak">
+                                <rect key="frame" x="20" y="84" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bEn-KJ-JSm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vg3-6Y-uRa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3lW-Cv-eea"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gek-ac-Lak" secondAttribute="trailing" constant="20" id="Jer-Zw-2xw"/>
                             <constraint firstItem="Vg3-6Y-uRa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="LQD-ad-yKI"/>
                             <constraint firstItem="ZpL-Er-rcQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="VlK-ov-MID"/>
+                            <constraint firstItem="gek-ac-Lak" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="auH-Pa-aOg"/>
                             <constraint firstItem="ZpL-Er-rcQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="byB-M9-InI"/>
+                            <constraint firstItem="gek-ac-Lak" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mH9-aH-Zhd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="YNd-ON-Uk5"/>
+                    <connections>
+                        <outlet property="textField" destination="gek-ac-Lak" id="ZWN-2n-AoJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

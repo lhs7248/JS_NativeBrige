@@ -10,7 +10,7 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <WebKit/WebKit.h>
 // :: Other ::
-//#import "LSOpenBrowerPlugin.h"
+#import "LSOpenBrowerPlugin.h"
 #import "LSGetUserTokenPlugin.h"
 
 
@@ -125,13 +125,13 @@
 
 - (void)addDefaultPlugins {
     // 交互：通过safari打开url
-//    [self addPlugin:[[LNOpenBrowserPlugin alloc]init]];
     // 交互：跳转至邀请好友界面，页面之间的表现为pop到上一层
 //    [self addPlugin:[[LNInviteFriendsPlugin alloc]init]];
     // 交互：调起分享的视图
 //    [self addPlugin:[[LNInvokeShareFunctionPlugin alloc]init]];
 //    [self addPlugin:[LSOpenBrowerPlugin alloc]]
     
+    [self addPlugin:[[LSOpenBrowerPlugin alloc]init]];
     [self addPlugin:[[LSGetUserTokenPlugin alloc]init]];
     
     if (self.webVC.webView) {
