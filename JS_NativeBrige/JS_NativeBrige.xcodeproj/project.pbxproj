@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		172693ED1F39AE7B0081785B /* LSOpenBrowerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */; };
+		172693F21F39D15D0081785B /* test.css in Resources */ = {isa = PBXBuildFile; fileRef = 172693EF1F39BE670081785B /* test.css */; };
+		172693F31F39D1610081785B /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 172693F01F39BE670081785B /* test.html */; };
+		172693F41F39D1650081785B /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 172693F11F39BE670081785B /* test.js */; };
 		175572AD1F394BC300155BCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572AC1F394BC300155BCE /* AppDelegate.m */; };
 		175572B01F394BC300155BCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572AF1F394BC300155BCE /* ViewController.m */; };
 		175572B31F394BC300155BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175572B11F394BC300155BCE /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		172693EB1F39AE7B0081785B /* LSOpenBrowerPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSOpenBrowerPlugin.h; sourceTree = "<group>"; };
 		172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSOpenBrowerPlugin.m; sourceTree = "<group>"; };
+		172693EF1F39BE670081785B /* test.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = test.css; sourceTree = "<group>"; };
+		172693F01F39BE670081785B /* test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		172693F11F39BE670081785B /* test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		175572A81F394BC300155BCE /* JS_NativeBrige.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JS_NativeBrige.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175572AB1F394BC300155BCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		175572AC1F394BC300155BCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,9 +103,21 @@
 			path = JS_NativeBrigePlugin;
 			sourceTree = "<group>";
 		};
+		172693EE1F39BE670081785B /* html */ = {
+			isa = PBXGroup;
+			children = (
+				172693EF1F39BE670081785B /* test.css */,
+				172693F01F39BE670081785B /* test.html */,
+				172693F11F39BE670081785B /* test.js */,
+			);
+			name = html;
+			path = JS_NativeBrige/html;
+			sourceTree = "<group>";
+		};
 		1755729F1F394BC300155BCE = {
 			isa = PBXGroup;
 			children = (
+				172693EE1F39BE670081785B /* html */,
 				175572AA1F394BC300155BCE /* JS_NativeBrige */,
 				175572C31F394BC400155BCE /* JS_NativeBrigeTests */,
 				175572CE1F394BC400155BCE /* JS_NativeBrigeUITests */,
@@ -276,9 +294,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172693F41F39D1650081785B /* test.js in Resources */,
 				175572B81F394BC300155BCE /* LaunchScreen.storyboard in Resources */,
 				175572B51F394BC300155BCE /* Assets.xcassets in Resources */,
 				175572B31F394BC300155BCE /* Main.storyboard in Resources */,
+				172693F31F39D1610081785B /* test.html in Resources */,
+				172693F21F39D15D0081785B /* test.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

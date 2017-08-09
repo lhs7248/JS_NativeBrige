@@ -14,6 +14,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 @interface LSWebViewController ()
 
+@property (nonatomic, strong) UIBarButtonItem* closeButtonItem;//关闭按钮
 
 @property(nonatomic,strong)LSDataBrigeManger  * pluginManager;
 
@@ -23,6 +24,18 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 @end
 
 @implementation LSWebViewController
+
+
+
++ (LSWebViewController *)webBrowser {
+    LSWebViewController *webBrowserViewController = [LSWebViewController webBrowserWithConfiguration:nil];
+    return webBrowserViewController;
+}
+
++ (LSWebViewController *)webBrowserWithConfiguration:(WKWebViewConfiguration *)configuration {
+    LSWebViewController *webBrowserViewController = [[self alloc] initWithConfiguration:configuration];
+    return webBrowserViewController;
+}
 
 #pragma mark - Initializers
 
@@ -45,8 +58,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
                 self.wkWebView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
             }
             
-//            MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self.wkWebView refreshingAction:@selector(reload)];
-//            header.lastUpdatedTimeLabel.hidden = YES;
             self.wkWebView.allowsBackForwardNavigationGestures = YES;
         }
         else {
@@ -81,7 +92,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         [self.wkWebView.scrollView setAlwaysBounceVertical:YES];
         [self.view addSubview:self.wkWebView];
         
-        [self.wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:0 context:KINWebBrowserContext];
         
         [_pluginManager addDefaultPlugins];
     }
@@ -101,7 +111,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
         self.navigationItem.leftBarButtonItems = nil;
         if ([self.navigationController.viewControllers indexOfObject:self] > 0) {
-            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:kNavBtn_back_custom] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(goBack:)];
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_back_default"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(goBack:)];
         }
     }
 }
@@ -346,11 +356,17 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 - (void)addSpaceButton{
     UIBarButtonItem *spaceButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     
-    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:kNavBtn_back_custom] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(goBack:)];
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_btn_back_default"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(goBack:)];
     
     self.navigationItem.leftBarButtonItems = @[spaceButtonItem,backBarButtonItem,self.closeButtonItem];
 }
 
+-(UIBarButtonItem*)closeButtonItem{
+    if (!_closeButtonItem) {
+        _closeButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_icon_close"] style:UIBarButtonItemStylePlain target:self action:@selector(closeItemClicked)];
+    }
+    return _closeButtonItem;
+}
 /*
 
  

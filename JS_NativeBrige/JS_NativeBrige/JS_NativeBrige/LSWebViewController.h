@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-
-
-
-@interface LSWebViewController : UIViewController
+@interface LSWebViewController : UIViewController<WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate>
 
 //提供的WebView
 @property(nonatomic,strong)UIWebView  * webView;
@@ -40,5 +37,11 @@
 // Loads an string containing HTML to web view
 // Can be called any time after initialization
 - (void)loadHTMLString:(NSString *)HTMLString;
+
+
++ (LSWebViewController *)webBrowser;
+
++ (LSWebViewController *)webBrowserWithConfiguration:(WKWebViewConfiguration *)configuration;
+
 @end
 
