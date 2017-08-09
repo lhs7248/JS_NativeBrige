@@ -1,13 +1,9 @@
 
 var mapCollection ={};
 
-
-
-
 function getToken() {
     
     const messageId = "100000000";
-
     mapCollection[messageId]= function(token){
         console.log(token);
     };
@@ -16,21 +12,11 @@ function getToken() {
      var  jsonStr = JSON.stringify(param);
 
 
-   window.webkit.messageHandlers.getToken.postMessage(jsonStr);
+   //window.webkit.messageHandlers.getToken.postMessage(jsonStr);
 
-
-//    window.webkit.messageHandlers.getToken1.postMessage(["name","title"]);
-    // window.webkit.messageHandlers.getToken1.postMessage(function(data){
-        // alert(data +"mess")
-    // })
+   window.webkit.messageHandlers.openBrowser.postMessage(jsonStr);
 }
 
-function getTokenStr(token){
-
-    alert(token)
-    // console.log(token)
-
-}
 
 
 function customFunction(obj){
@@ -43,21 +29,7 @@ function customFunction(obj){
    mapCollection[messageId](messageBody);
 
    delete mapCollection[messageId]
-   
-
-    
 
 
-}
 
-//获取token
-function getQueryString(name){
-//    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-//    var r = window.location.search.substr(1).match(reg);
-//    if (r != null)
-//        return unescape(r[2]);
-    return null;
-};
-function showToken (token) {
-    alert(token);
 }

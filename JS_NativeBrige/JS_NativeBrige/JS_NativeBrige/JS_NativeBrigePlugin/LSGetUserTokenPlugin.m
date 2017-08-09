@@ -13,7 +13,12 @@
 -(NSString *)scriptMessageHandlerName{
     return @"getToken";
 }
--(id)brower:(id)browser didReceiveScriptMessage:(id)message{
+
+-(void)browser:(id)browser didReceiveScriptMessage:(id)message{
+   
+    
+}
+-(id)browerCallBack:(id)browser didReceiveScriptMessage:(id)message{
    
     return @"token";
 }

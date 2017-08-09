@@ -69,21 +69,24 @@
     
     NSDictionary * dict = [self jsonStrToObj:messageBody];
     if ([dict[@"requireBack"] boolValue] == NO) {
-        
-        [plugin browser:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
+        if ([plugin respondsToSelector:@selector(browser:didReceiveScriptMessage:)]) {
+            
+            [plugin browser:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
+        }
     }else{
-        
-        id backParma = [plugin brower:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
-        
-        NSMutableDictionary * paramDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        [paramDict setValue:dict[@"messageId"] forKey:@"messageId"];
-        [paramDict setValue:backParma forKey:@"messageBody"];
-        
-        NSString * paramStr = [self objToJsonStr:paramDict];
-        
-        NSString * method = [dict valueForKey:@"method"];
-        
-        [self evaluateJavaScriptMethod:method param:paramStr];
+        if ([plugin respondsToSelector:@selector(browerCallBack:didReceiveScriptMessage:)]) {
+            id backParma = [plugin browerCallBack:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
+            NSMutableDictionary * paramDict = [NSMutableDictionary dictionaryWithCapacity:10];
+            [paramDict setValue:dict[@"messageId"] forKey:@"messageId"];
+            [paramDict setValue:backParma forKey:@"messageBody"];
+            
+            NSString * paramStr = [self objToJsonStr:paramDict];
+            
+            NSString * method = [dict valueForKey:@"method"];
+            
+            [self evaluateJavaScriptMethod:method param:paramStr];
+            
+        }
         
     }
     

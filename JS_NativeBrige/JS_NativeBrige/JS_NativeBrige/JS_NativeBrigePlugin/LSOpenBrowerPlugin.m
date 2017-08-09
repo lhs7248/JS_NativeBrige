@@ -31,4 +31,9 @@
     }
     
 }
+
+-(id)browerCallBack:(id)browser didReceiveScriptMessage:(id)message{
+   
+    return @"callBack";
+}
 @end

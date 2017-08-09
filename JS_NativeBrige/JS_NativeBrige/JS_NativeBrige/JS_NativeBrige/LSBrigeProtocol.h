@@ -22,7 +22,7 @@
 
 @optional
 
--(id)brower:(id)browser didReceiveScriptMessage:(id)message;
+-(id)browerCallBack:(id)browser didReceiveScriptMessage:(id)message;
 
 
 @end
