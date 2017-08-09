@@ -6,14 +6,15 @@ var mapCollection ={};
 
 function getToken() {
     
-    const id = "100000000";
+    const messageId = "100000000";
 
-    mapCollection[id]= function(token){
+    mapCollection[messageId]= function(token){
         console.log(token);
     };
 
-   var param =  {"requireBack":"false","method":"customFunction","messageId":id,"messageBody":{}};
-     var  jsonStr = JSON(param);
+   var param =  {"requireBack":true,"method":"customFunction","messageId":messageId,"messageBody":{}};
+     var  jsonStr = JSON.stringify(param);
+
 
    window.webkit.messageHandlers.getToken.postMessage(jsonStr);
 
@@ -36,12 +37,12 @@ function customFunction(obj){
    console.log(obj);
    var dict =  JSON.parse(obj);
 
-   const param = dict["param"];
-   const id =  dict["id"];
+   const messageBody = dict["messageBody"];
+   const messageId =  dict["messageId"];
 
-   mapCollection[id](param);
+   mapCollection[messageId](messageBody);
 
-   delete mapCollection[id]
+   delete mapCollection[messageId]
    
 
     

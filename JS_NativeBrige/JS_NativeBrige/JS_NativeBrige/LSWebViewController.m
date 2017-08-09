@@ -166,12 +166,12 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     [self loadURL:URL];
 }
 
-- (void)loadHTMLString:(NSString *)HTMLString {
+- (void)loadHTMLString:(NSString *)HTMLString baseURl:(NSURL *)baseUrl{
     if(self.wkWebView) {
-        [self.wkWebView loadHTMLString:HTMLString baseURL:nil];
+        [self.wkWebView loadHTMLString:HTMLString baseURL:baseUrl];
     }
     else if(self.webView) {
-        [self.webView loadHTMLString:HTMLString baseURL:nil];
+        [self.webView loadHTMLString:HTMLString baseURL:baseUrl];
     }
 }
 
@@ -211,7 +211,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if(webView == self.webView) {
-        [self checkWebViewCanGoBack];
+//        [self checkWebViewCanGoBack];
         
     }
 }
@@ -249,7 +249,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     if(webView == self.wkWebView) {
-        [self checkWebViewCanGoBack];
+//        [self checkWebViewCanGoBack];
         
     }
 }
@@ -272,22 +272,22 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    if(webView == self.wkWebView) {
-        NSURL *URL = navigationAction.request.URL;
-        if(![self externalAppRequiredToOpenURL:URL]) {
-            if(!navigationAction.targetFrame) {
-                [self loadURL:URL];
-                decisionHandler(WKNavigationActionPolicyCancel);
-                return;
-            }
-        }
-        else if([[UIApplication sharedApplication] canOpenURL:URL]) {
-//             跳转到系统浏览器进行打开
-//            [self launchExternalAppWithURL:URL];
-            decisionHandler(WKNavigationActionPolicyCancel);
-            return;
-        }
-    }
+//    if(webView == self.wkWebView) {
+//        NSURL *URL = navigationAction.request.URL;
+//        if(![self externalAppRequiredToOpenURL:URL]) {
+//            if(!navigationAction.targetFrame) {
+//                [self loadURL:URL];
+//                decisionHandler(WKNavigationActionPolicyCancel);
+//                return;
+//            }
+//        }
+//        else if([[UIApplication sharedApplication] canOpenURL:URL]) {
+////             跳转到系统浏览器进行打开
+////            [self launchExternalAppWithURL:URL];
+//            decisionHandler(WKNavigationActionPolicyCancel);
+//            return;
+//        }
+//    }
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 

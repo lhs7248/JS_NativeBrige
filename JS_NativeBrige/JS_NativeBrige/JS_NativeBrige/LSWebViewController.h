@@ -37,7 +37,9 @@
 
 // Loads an string containing HTML to web view
 // Can be called any time after initialization
-- (void)loadHTMLString:(NSString *)HTMLString;
+//- (void)loadHTMLString:(NSString *)HTMLString;
+
+- (void)loadHTMLString:(NSString *)HTMLString baseURl:(NSURL *)baseUrl;
 
 
 + (LSWebViewController *)webBrowser;

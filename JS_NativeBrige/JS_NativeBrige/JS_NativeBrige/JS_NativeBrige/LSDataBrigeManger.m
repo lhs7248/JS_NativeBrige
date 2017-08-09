@@ -10,7 +10,7 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <WebKit/WebKit.h>
 // :: Other ::
-#import "LSOpenBrowerPlugin.h"
+//#import "LSOpenBrowerPlugin.h"
 #import "LSGetUserTokenPlugin.h"
 
 
@@ -76,7 +76,7 @@
         id backParma = [plugin brower:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
         
         NSMutableDictionary * paramDict = [NSMutableDictionary dictionaryWithCapacity:10];
-        [paramDict setValue:messageBody[@"messageId"] forKey:@"messageId"];
+        [paramDict setValue:dict[@"messageId"] forKey:@"messageId"];
         [paramDict setValue:backParma forKey:@"messageBody"];
         
         NSString * paramStr = [self objToJsonStr:paramDict];

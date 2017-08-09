@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		172693ED1F39AE7B0081785B /* LSOpenBrowerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */; };
-		172693F21F39D15D0081785B /* test.css in Resources */ = {isa = PBXBuildFile; fileRef = 172693EF1F39BE670081785B /* test.css */; };
-		172693F31F39D1610081785B /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 172693F01F39BE670081785B /* test.html */; };
-		172693F41F39D1650081785B /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 172693F11F39BE670081785B /* test.js */; };
 		175572AD1F394BC300155BCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572AC1F394BC300155BCE /* AppDelegate.m */; };
 		175572B01F394BC300155BCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572AF1F394BC300155BCE /* ViewController.m */; };
 		175572B31F394BC300155BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175572B11F394BC300155BCE /* Main.storyboard */; };
@@ -21,6 +18,9 @@
 		175572D01F394BC400155BCE /* JS_NativeBrigeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572CF1F394BC400155BCE /* JS_NativeBrigeUITests.m */; };
 		175572E01F394FA500155BCE /* LSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572DF1F394FA500155BCE /* LSWebViewController.m */; };
 		175572E71F39503D00155BCE /* LSDataBrigeManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572E61F39503D00155BCE /* LSDataBrigeManger.m */; };
+		1773BEA71F3ABB2000E63793 /* test.css in Resources */ = {isa = PBXBuildFile; fileRef = 1773BEA41F3ABB2000E63793 /* test.css */; };
+		1773BEA81F3ABB2000E63793 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 1773BEA51F3ABB2000E63793 /* test.html */; };
+		1773BEA91F3ABB2000E63793 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 1773BEA61F3ABB2000E63793 /* test.js */; };
 		17BF36711F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +44,6 @@
 /* Begin PBXFileReference section */
 		172693EB1F39AE7B0081785B /* LSOpenBrowerPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSOpenBrowerPlugin.h; sourceTree = "<group>"; };
 		172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSOpenBrowerPlugin.m; sourceTree = "<group>"; };
-		172693EF1F39BE670081785B /* test.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = test.css; sourceTree = "<group>"; };
-		172693F01F39BE670081785B /* test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		172693F11F39BE670081785B /* test.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		175572A81F394BC300155BCE /* JS_NativeBrige.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JS_NativeBrige.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175572AB1F394BC300155BCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		175572AC1F394BC300155BCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,6 +65,9 @@
 		175572E51F39503D00155BCE /* LSDataBrigeManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDataBrigeManger.h; sourceTree = "<group>"; };
 		175572E61F39503D00155BCE /* LSDataBrigeManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDataBrigeManger.m; sourceTree = "<group>"; };
 		175572E91F3950A300155BCE /* LSBrigeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBrigeProtocol.h; sourceTree = "<group>"; };
+		1773BEA41F3ABB2000E63793 /* test.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = test.css; path = html/test.css; sourceTree = "<group>"; };
+		1773BEA51F3ABB2000E63793 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = test.html; path = html/test.html; sourceTree = "<group>"; };
+		1773BEA61F3ABB2000E63793 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = test.js; path = html/test.js; sourceTree = "<group>"; };
 		17BF366F1F3AA7DA0048CA57 /* LSGetUserTokenPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSGetUserTokenPlugin.h; sourceTree = "<group>"; };
 		17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSGetUserTokenPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,21 +108,9 @@
 			path = JS_NativeBrigePlugin;
 			sourceTree = "<group>";
 		};
-		172693EE1F39BE670081785B /* html */ = {
-			isa = PBXGroup;
-			children = (
-				172693EF1F39BE670081785B /* test.css */,
-				172693F01F39BE670081785B /* test.html */,
-				172693F11F39BE670081785B /* test.js */,
-			);
-			name = html;
-			path = JS_NativeBrige/html;
-			sourceTree = "<group>";
-		};
 		1755729F1F394BC300155BCE = {
 			isa = PBXGroup;
 			children = (
-				172693EE1F39BE670081785B /* html */,
 				175572AA1F394BC300155BCE /* JS_NativeBrige */,
 				175572C31F394BC400155BCE /* JS_NativeBrigeTests */,
 				175572CE1F394BC400155BCE /* JS_NativeBrigeUITests */,
@@ -143,6 +131,9 @@
 		175572AA1F394BC300155BCE /* JS_NativeBrige */ = {
 			isa = PBXGroup;
 			children = (
+				1773BEA41F3ABB2000E63793 /* test.css */,
+				1773BEA51F3ABB2000E63793 /* test.html */,
+				1773BEA61F3ABB2000E63793 /* test.js */,
 				175572DD1F394D5E00155BCE /* JS_NativeBrige */,
 				175572AB1F394BC300155BCE /* AppDelegate.h */,
 				175572AC1F394BC300155BCE /* AppDelegate.m */,
@@ -299,12 +290,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172693F41F39D1650081785B /* test.js in Resources */,
+				1773BEA91F3ABB2000E63793 /* test.js in Resources */,
 				175572B81F394BC300155BCE /* LaunchScreen.storyboard in Resources */,
 				175572B51F394BC300155BCE /* Assets.xcassets in Resources */,
 				175572B31F394BC300155BCE /* Main.storyboard in Resources */,
-				172693F31F39D1610081785B /* test.html in Resources */,
-				172693F21F39D15D0081785B /* test.css in Resources */,
+				1773BEA81F3ABB2000E63793 /* test.html in Resources */,
+				1773BEA71F3ABB2000E63793 /* test.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7FYG9D6WTR;
 				INFOPLIST_FILE = JS_NativeBrige/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hujin.JS-NativeBrige";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7FYG9D6WTR;
 				INFOPLIST_FILE = JS_NativeBrige/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hujin.JS-NativeBrige";
 				PRODUCT_NAME = "$(TARGET_NAME)";

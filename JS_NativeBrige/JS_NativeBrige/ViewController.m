@@ -42,7 +42,8 @@
                                                        error:nil];
 
 
-    [webVC loadHTMLString:htmlCont];
+//    [webVC loadHTMLString:htmlCont];
+    [webVC loadHTMLString:htmlCont baseURl:baseURL];
     [self.navigationController pushViewController:webVC animated:YES];
     
 }
