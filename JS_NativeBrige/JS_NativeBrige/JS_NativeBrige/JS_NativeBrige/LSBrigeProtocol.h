@@ -10,12 +10,19 @@
 
 @protocol LSBrigeProtocol <NSObject>
 
+@required
 // js调用客户端的方法名
 
 - (NSString *)scriptMessageHandlerName;
 
+@optional
+
 // 客户端接收到js方法的回调
 - (void )browser:(id)browser didReceiveScriptMessage:(id)message;
+
+@optional
+
+-(id)brower:(id)browser didReceiveScriptMessage:(id)message;
 
 
 @end

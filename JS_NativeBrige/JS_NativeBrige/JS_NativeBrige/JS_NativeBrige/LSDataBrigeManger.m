@@ -11,6 +11,8 @@
 #import <WebKit/WebKit.h>
 // :: Other ::
 #import "LSOpenBrowerPlugin.h"
+#import "LSGetUserTokenPlugin.h"
+
 
 @interface LSDataBrigeManger()<WKScriptMessageHandler>
 
@@ -56,10 +58,37 @@
     id<LSBrigeProtocol> plugin = [_plugins objectForKey:message.name];
     
     if (plugin) {
-        [plugin browser:self.webVC didReceiveScriptMessage:message.body];
+        
+        [self plugin:plugin messagaBoy:message.body];
+      
     }
     
 }
+// 处理H5 页面传到Native的信息
+-(void)plugin:(id<LSBrigeProtocol>)plugin messagaBoy:(id)messageBody{
+    
+    NSDictionary * dict = [self jsonStrToObj:messageBody];
+    if ([dict[@"requireBack"] boolValue] == NO) {
+        
+        [plugin browser:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
+    }else{
+        
+        id backParma = [plugin brower:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
+        
+        NSMutableDictionary * paramDict = [NSMutableDictionary dictionaryWithCapacity:10];
+        [paramDict setValue:messageBody[@"messageId"] forKey:@"messageId"];
+        [paramDict setValue:backParma forKey:@"messageBody"];
+        
+        NSString * paramStr = [self objToJsonStr:paramDict];
+        
+        NSString * method = [dict valueForKey:@"method"];
+        
+        [self evaluateJavaScriptMethod:method param:paramStr];
+        
+    }
+    
+}
+
 
 // 添加plugin 的方法
 - (void)addPlugin:(id<LSBrigeProtocol>)plugin {
@@ -83,7 +112,7 @@
         if (![_messageHandlers objectForKey:name]) {
             [_messageHandlers setObject:@{@"postMessage":^(id data) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [plugin browser:self.webVC didReceiveScriptMessage:data];
+                    [self plugin:plugin messagaBoy:data];
                 });
             }} forKey:name];
         }
@@ -101,6 +130,9 @@
 //    [self addPlugin:[[LNInviteFriendsPlugin alloc]init]];
     // 交互：调起分享的视图
 //    [self addPlugin:[[LNInvokeShareFunctionPlugin alloc]init]];
+//    [self addPlugin:[LSOpenBrowerPlugin alloc]]
+    
+    [self addPlugin:[[LSGetUserTokenPlugin alloc]init]];
     
     if (self.webVC.webView) {
         JSContext *context = self.jsContext;
@@ -129,11 +161,41 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
 }
 
+-(void)evaluateJavaScriptMethod:(NSString *)method param:(NSString *)paramStr{
+    
+    NSString *jsStr = [NSString stringWithFormat:@"%@('%@')",method,paramStr];
+    if (self.webVC.wkWebView) {
+        [self.webVC.wkWebView evaluateJavaScript:jsStr completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+            NSLog(@"%@----%@",result, error);
+        }];
+    }else if (self.webVC.webView){
+        [self.webVC.webView stringByEvaluatingJavaScriptFromString:jsStr];
+    }
+    
+}
+
+#pragma mark -- json & obj
+-(id)jsonStrToObj:(NSString *)jsonStr{
+    
+    NSData * jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    
+    id obj =  [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+    return obj;
+}
+
+-(NSString *)objToJsonStr:(id)obj{
+    
+    NSData * data = [NSJSONSerialization dataWithJSONObject:obj options:0 error:0];
+    NSString * jsonStr = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    return jsonStr;
+}
+
 #pragma mark - Getters & Setters
 
 - (JSContext *)jsContext {
     return [self.webVC.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
 }
+
 
 - (NSMutableDictionary *)fakeJSWebKit {
     if (!_fakeJSWebKit) {

@@ -11,6 +11,7 @@
 
 @interface LSWebViewController : UIViewController<WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate>
 
+
 //提供的WebView
 @property(nonatomic,strong)UIWebView  * webView;
 
@@ -40,8 +41,7 @@
 
 
 + (LSWebViewController *)webBrowser;
-
-+ (LSWebViewController *)webBrowserWithConfiguration:(WKWebViewConfiguration *)configuration;
++ (LSWebViewController *)webBrowserWithConfiguration:(BOOL)useWKWebView;
 
 @end
 

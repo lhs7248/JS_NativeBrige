@@ -1,9 +1,12 @@
 #p{
     color:red;
+    left:100;
+    top:100;
 }
 #img{
     width:120px;
     height:50px;
+    size:100px;
 }
 #a{
     color:yellow;

@@ -32,8 +32,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     return webBrowserViewController;
 }
 
-+ (LSWebViewController *)webBrowserWithConfiguration:(WKWebViewConfiguration *)configuration {
-    LSWebViewController *webBrowserViewController = [[self alloc] initWithConfiguration:configuration];
++ (LSWebViewController *)webBrowserWithConfiguration:(BOOL)useWKWebView {
+    LSWebViewController *webBrowserViewController = [[self alloc] initWithConfiguration:useWKWebView];
     return webBrowserViewController;
 }
 
@@ -43,10 +43,11 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     return [self initWithConfiguration:nil];
 }
 
-- (id)initWithConfiguration:(WKWebViewConfiguration *)configuration {
+- (id)initWithConfiguration:(BOOL)useWKWebView {
     self = [super init];
     if(self) {
-        if([WKWebView class]) {
+        if(useWKWebView) {
+            WKWebViewConfiguration * configuration = [[WKWebViewConfiguration alloc]init];
             WKUserContentController *userContentController = [[WKUserContentController alloc] init];
             if(configuration) {
                 configuration.userContentController = userContentController;
@@ -91,7 +92,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         [self.wkWebView setAutoresizesSubviews:YES];
         [self.wkWebView.scrollView setAlwaysBounceVertical:YES];
         [self.view addSubview:self.wkWebView];
-        
         
         [_pluginManager addDefaultPlugins];
     }

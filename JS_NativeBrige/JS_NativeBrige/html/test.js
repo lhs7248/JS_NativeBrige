@@ -12,8 +12,11 @@ function getToken() {
         console.log(token);
     };
 
+   var param =  {"requireBack":"false","method":"customFunction","messageId":id,"messageBody":{}};
+     var  jsonStr = JSON(param);
 
-   window.webkit.messageHandlers.getToken1.postMessage({id:id,method:'customFunction'});
+   window.webkit.messageHandlers.getToken.postMessage(jsonStr);
+
 
 //    window.webkit.messageHandlers.getToken1.postMessage(["name","title"]);
     // window.webkit.messageHandlers.getToken1.postMessage(function(data){

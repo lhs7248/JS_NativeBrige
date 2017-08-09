@@ -11,7 +11,6 @@
 
 
 @interface ViewController ()
-@property(nonatomic,strong)LSWebViewController  * webVC;
 
 @end
 
@@ -20,9 +19,20 @@
 - (IBAction)webViewAction:(id)sender {
     
     
+    LSWebViewController * WebVC = [LSWebViewController webBrowserWithConfiguration:YES];
+    
+    [self pushWebVC:WebVC];
+    
 }
 - (IBAction)wkWebViewAction:(id)sender {
     
+    LSWebViewController * wkWebVC = [LSWebViewController webBrowserWithConfiguration:YES];
+    [self pushWebVC:wkWebVC];
+
+}
+
+
+-(void)pushWebVC:(LSWebViewController *)webVC{
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
     NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"test"
@@ -30,16 +40,16 @@
     NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
                                                     encoding:NSUTF8StringEncoding
                                                        error:nil];
-    [self.webVC.webView loadHTMLString:htmlCont baseURL:baseURL];
-//    [self.webVC loadURLString:htmlPath];
-    [self.webVC loadHTMLString:htmlCont];
-    [self.navigationController pushViewController:self.webVC animated:YES];
-}
 
+
+    [webVC loadHTMLString:htmlCont];
+    [self.navigationController pushViewController:webVC animated:YES];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.webVC = [[LSWebViewController alloc]init];
+
     
     
     // Do any additional setup after loading the view, typically from a nib.

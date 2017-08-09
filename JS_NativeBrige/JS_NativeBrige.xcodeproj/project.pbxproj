@@ -21,6 +21,7 @@
 		175572D01F394BC400155BCE /* JS_NativeBrigeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572CF1F394BC400155BCE /* JS_NativeBrigeUITests.m */; };
 		175572E01F394FA500155BCE /* LSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572DF1F394FA500155BCE /* LSWebViewController.m */; };
 		175572E71F39503D00155BCE /* LSDataBrigeManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572E61F39503D00155BCE /* LSDataBrigeManger.m */; };
+		17BF36711F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		175572E51F39503D00155BCE /* LSDataBrigeManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDataBrigeManger.h; sourceTree = "<group>"; };
 		175572E61F39503D00155BCE /* LSDataBrigeManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDataBrigeManger.m; sourceTree = "<group>"; };
 		175572E91F3950A300155BCE /* LSBrigeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBrigeProtocol.h; sourceTree = "<group>"; };
+		17BF366F1F3AA7DA0048CA57 /* LSGetUserTokenPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSGetUserTokenPlugin.h; sourceTree = "<group>"; };
+		17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSGetUserTokenPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 			children = (
 				172693EB1F39AE7B0081785B /* LSOpenBrowerPlugin.h */,
 				172693EC1F39AE7B0081785B /* LSOpenBrowerPlugin.m */,
+				17BF366F1F3AA7DA0048CA57 /* LSGetUserTokenPlugin.h */,
+				17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */,
 			);
 			path = JS_NativeBrigePlugin;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BF36711F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m in Sources */,
 				175572E01F394FA500155BCE /* LSWebViewController.m in Sources */,
 				175572B01F394BC300155BCE /* ViewController.m in Sources */,
 				175572E71F39503D00155BCE /* LSDataBrigeManger.m in Sources */,
