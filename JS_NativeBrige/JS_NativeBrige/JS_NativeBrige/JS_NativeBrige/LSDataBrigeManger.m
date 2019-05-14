@@ -14,6 +14,8 @@
 #import "LSGetUserTokenPlugin.h"
 
 
+#import "LSH5Function.h"
+
 @interface LSDataBrigeManger()<WKScriptMessageHandler>
 
 @property(nonatomic,strong)LSWebViewController  * webVC;
@@ -67,10 +69,12 @@
 // 处理H5 页面传到Native的信息
 -(void)plugin:(id<LSBrigeProtocol>)plugin messagaBoy:(id)messageBody{
     
-    NSDictionary * dict = [self jsonStrToObj:messageBody];
+
+//    NSDictionary * dict = [self jsonStrToObj:messageBody];
+    NSDictionary * dict = messageBody;
     if ([dict[@"requireBack"] boolValue] == NO) {
         if ([plugin respondsToSelector:@selector(browser:didReceiveScriptMessage:)]) {
-            
+
             [plugin browser:self.webVC didReceiveScriptMessage:dict[@"messageBody"]];
         }
     }else{
@@ -79,15 +83,15 @@
             NSMutableDictionary * paramDict = [NSMutableDictionary dictionaryWithCapacity:10];
             [paramDict setValue:dict[@"messageId"] forKey:@"messageId"];
             [paramDict setValue:backParma forKey:@"messageBody"];
-            
+
             NSString * paramStr = [self objToJsonStr:paramDict];
-            
+
             NSString * method = [dict valueForKey:@"method"];
-            
+
             [self evaluateJavaScriptMethod:method param:paramStr];
-            
+
         }
-        
+
     }
     
 }
@@ -140,6 +144,7 @@
     if (self.webVC.webView) {
         JSContext *context = self.jsContext;
         context[@"webkit"] = self.fakeJSWebKit;
+//        context[@"NativeFunction"] = [[LSH5Function alloc]init];
     }
 }
 

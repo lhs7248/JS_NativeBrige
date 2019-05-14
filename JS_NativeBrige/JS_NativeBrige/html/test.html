@@ -3,26 +3,57 @@
 <head lang="zh">
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
     <title>第一个HTML</title>
-
-    <link rel="stylesheet" type="text/css" href="test.css">
-
-    <script type="text/javascript" src="test.js"></script>
+    <link rel="stylesheet" type="text/css" href="./test.css">
 </head>
 <body>
 
-    <h1 >我是HTML</h1>
+    <div style="flex: 1; text-align: center;">
+        <p style="font-size: 2rem;text-align: center;">测试的HTML 标签</p>
+    </div>
+    <div  class="div-module">
+        <a class="button_style"> 拦截URL</a>
+        <div style="display: flex;flex-direction: row;">   
 
-    <p id = "p">p标签</p>
+            <button class="button_style" onclick = "protocolURL()">WebView拦截URL</button>               
+        </div>
+    </div>
 
-    <img id = "img" src = "https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png" alt = "百度LOGO"><br/>
+    <div  class="div-module">
+        <a class="button_style"> JSExport</a>
+        <div style="display: flex;flex-direction: row;">   
+            <button class="button_style"  onclick = "jsExportToastStr()">JSExport toast Str</button>       
+            <button class="button_style"  onclick = "jsExportToastArray()">JSExport toast Array</button>       
+        </div>
+        <div style="display: flex;flex-direction: row;">
+            <button class="button_style"  onclick = "jsExportToastDict()">JSExport toast Dict</button>       
+            <button class="button_style"  onclick = "jsExportLocation()">JSExport getMessage</button>           
+        </div>
+              <p id="location_text"></p>
+    </div>
+    <div  class="div-module">
+         <a class="button_style"> postMessage</a>
+         <div style="display: flex; flex-direction: row;"> 
+            <button class="button_style" onclick = "postMessage()">WKWebView postMessage</button>                
+         </div>
+    </div>
+<!--     <div class="div-module">
+         <a class="button_style"> prompt</a>
+        <div style="flex: 1;flex-direction: row;">
+            <button class="button_style" onclick = "promptMessage()">WKWebView prompt </button>                
+        </div>        
+    </div> -->
 
-    <a id = "a" href="https://www.baidu.com">我要到百度</a>
+    <div style="width: 100%;height: 20px;"></div>
+    <div>
+        <input id="inp" type='file'  style="width: 200px;height: 50px;">
+        <p id="b64"></p>
+        <img id="img" style="width: 300px;height:300px">
+    </div>
 
-    <br/><br/><br/>
-
-    <button id="img" item-height="100px",item-width="100px",  onclick = "getToken()">点击我弹出hello</button>
+<script type="text/javascript" src="./test.js"></script>
 </body>
 
 </html>

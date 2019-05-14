@@ -1,7 +1,22 @@
+.div-module{
+	margin: 10px;
+}
+
+.button_style{
+	flex: 1;
+	margin: 5px;
+	font-size: 16px;
+	color: black;
+	border-radius: 6px;
+	outline:none;
+}
+.btn:hover{
+            background-color: #ff0000;
+        }
 #p{
     color:red;
-    left:100;
-    top:100;
+    font-size: 16px;
+    padding: 20px;
 }
 #img{
     width:120px;
@@ -9,5 +24,11 @@
     size:100px;
 }
 #a{
-    color:yellow;
+	color: black;
+	font-size: 16px;
 }
+
+body{
+margin: 10px
+}
+
