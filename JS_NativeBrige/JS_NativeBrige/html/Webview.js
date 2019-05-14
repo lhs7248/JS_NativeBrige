@@ -10,14 +10,35 @@ function protocolURL(){
   iframe.parentNode.removeChild(iframe);
   iframe = null;
 }
+function testProtocolURL(){
+  var startTimes = +new Date();
+  document.getElementById("testStartTime").innerHTML = startTimes;
 
+  for (var i = 0; i < 1000; i++) {
+    protocolURL();
+  }
+
+  var endTimes = +new Date();
+  document.getElementById("testEndTime").innerHTML = endTimes;
+
+}
 // 显示 toast 弹窗
 function jsExportToastStr(){
 
    var locationMessage = NativeFunction.showTost('JSExport Toast');
 
-   console.log(locationMessage);
 }
+function testJsExportToastStr(){
+    var startTimes = +new Date();
+  document.getElementById("testJSCoreStartTime").innerHTML = startTimes;
+
+  for (var i = 0; i < 1000; i++) {
+    jsExportToastStr();
+  }
+  var endTimes = +new Date();
+  document.getElementById("testJSCoreEndTime").innerHTML = endTimes;
+}
+
 function jsExportToastArray(){
 
   var array = ["name","age","sex"]

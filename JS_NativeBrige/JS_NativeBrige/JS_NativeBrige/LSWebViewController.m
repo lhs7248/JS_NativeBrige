@@ -203,7 +203,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     if (webView == self.webView) {
         if ([url.scheme isEqualToString:@"ald"]) {
             NSString * urlStr = [url resourceSpecifier];
-            [self showAlert:urlStr];
+            NSLog(@"protocol:%@",urlStr);
+//            [self showAlert:urlStr];
         }
 
     }

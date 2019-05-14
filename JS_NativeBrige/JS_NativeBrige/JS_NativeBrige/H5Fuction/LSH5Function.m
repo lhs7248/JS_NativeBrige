@@ -44,10 +44,11 @@
     });
 }
 - (void)showTost:(NSString *)toastStr {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [SVProgressHUD showWithStatus:toastStr];
-        [SVProgressHUD dismissWithDelay:3];
-    });
+    NSLog(@"showTost:%@",toastStr);
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [SVProgressHUD showWithStatus:toastStr];
+//        [SVProgressHUD dismissWithDelay:3];
+//    });
 }
 
 - (NSString *)getCurrentLocation {
