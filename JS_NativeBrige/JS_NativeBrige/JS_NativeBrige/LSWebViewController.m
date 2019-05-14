@@ -206,25 +206,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
             [self showAlert:urlStr];
         }
 
-        //        if(![self externalAppRequiredToOpenURL:request.URL]) {
-        //            self.uiWebViewCurrentURL = request.URL;
-        //            self.uiWebViewIsLoading = YES;
-        //            [self updateNavigationBarState];
-        //
-        //            [self fakeProgressViewStartLoading];
-        //
-        //            if([self.delegate
-        //            respondsToSelector:@selector(webBrowser:didStartLoadingURL:)])
-        //            {
-        //                [self.delegate webBrowser:self
-        //                didStartLoadingURL:request.URL];
-        //            }
-        //            return YES;
-        //        }
-        //        else {
-        //            [self launchExternalAppWithURL:request.URL];
-        //            return NO;
-        //        }
     }
     return YES;
 }

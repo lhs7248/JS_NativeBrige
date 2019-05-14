@@ -19,9 +19,12 @@
 		175572E01F394FA500155BCE /* LSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572DF1F394FA500155BCE /* LSWebViewController.m */; };
 		175572E71F39503D00155BCE /* LSDataBrigeManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 175572E61F39503D00155BCE /* LSDataBrigeManger.m */; };
 		1773BEA71F3ABB2000E63793 /* test.css in Resources */ = {isa = PBXBuildFile; fileRef = 1773BEA41F3ABB2000E63793 /* test.css */; };
-		1773BEA81F3ABB2000E63793 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 1773BEA51F3ABB2000E63793 /* test.html */; };
-		1773BEA91F3ABB2000E63793 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 1773BEA61F3ABB2000E63793 /* test.js */; };
 		17997857224A0AB100A82E55 /* LSH5Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 17997856224A0AB100A82E55 /* LSH5Function.m */; };
+		17A0E55D228AA21A009D68D7 /* JSBrige.html in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E55A228AA21A009D68D7 /* JSBrige.html */; };
+		17A0E55E228AA21A009D68D7 /* webViewJSBrige.html in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E55B228AA21A009D68D7 /* webViewJSBrige.html */; };
+		17A0E55F228AA21A009D68D7 /* WKWebViewJSBrige.html in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E55C228AA21A009D68D7 /* WKWebViewJSBrige.html */; };
+		17A0E562228AB628009D68D7 /* Webview.js in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E560228AB627009D68D7 /* Webview.js */; };
+		17A0E563228AB628009D68D7 /* WKWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E561228AB628009D68D7 /* WKWebView.js */; };
 		17BF36711F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */; };
 		6F25769BCD74692D43C27158 /* libPods-JS_NativeBrigeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F09CFEF05682987817B2EA /* libPods-JS_NativeBrigeUITests.a */; };
 		CCBD2F9983EA61F6750ECB35 /* libPods-JS_NativeBrigeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0804F3A1E3ACD39897373814 /* libPods-JS_NativeBrigeTests.a */; };
@@ -73,10 +76,13 @@
 		175572E61F39503D00155BCE /* LSDataBrigeManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDataBrigeManger.m; sourceTree = "<group>"; };
 		175572E91F3950A300155BCE /* LSBrigeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBrigeProtocol.h; sourceTree = "<group>"; };
 		1773BEA41F3ABB2000E63793 /* test.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = test.css; path = html/test.css; sourceTree = "<group>"; };
-		1773BEA51F3ABB2000E63793 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = test.html; path = html/test.html; sourceTree = "<group>"; };
-		1773BEA61F3ABB2000E63793 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = test.js; path = html/test.js; sourceTree = "<group>"; };
 		17997855224A0AB100A82E55 /* LSH5Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSH5Function.h; sourceTree = "<group>"; };
 		17997856224A0AB100A82E55 /* LSH5Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSH5Function.m; sourceTree = "<group>"; };
+		17A0E55A228AA21A009D68D7 /* JSBrige.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = JSBrige.html; path = html/JSBrige.html; sourceTree = "<group>"; };
+		17A0E55B228AA21A009D68D7 /* webViewJSBrige.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = webViewJSBrige.html; path = html/webViewJSBrige.html; sourceTree = "<group>"; };
+		17A0E55C228AA21A009D68D7 /* WKWebViewJSBrige.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = WKWebViewJSBrige.html; path = html/WKWebViewJSBrige.html; sourceTree = "<group>"; };
+		17A0E560228AB627009D68D7 /* Webview.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Webview.js; path = html/Webview.js; sourceTree = "<group>"; };
+		17A0E561228AB628009D68D7 /* WKWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = WKWebView.js; path = html/WKWebView.js; sourceTree = "<group>"; };
 		17BF366F1F3AA7DA0048CA57 /* LSGetUserTokenPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSGetUserTokenPlugin.h; sourceTree = "<group>"; };
 		17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSGetUserTokenPlugin.m; sourceTree = "<group>"; };
 		287C832ADF630DE72AE318ED /* Pods-JS_NativeBrige.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JS_NativeBrige.release.xcconfig"; path = "Target Support Files/Pods-JS_NativeBrige/Pods-JS_NativeBrige.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,9 +157,12 @@
 		175572AA1F394BC300155BCE /* JS_NativeBrige */ = {
 			isa = PBXGroup;
 			children = (
+				17A0E55A228AA21A009D68D7 /* JSBrige.html */,
+				17A0E55B228AA21A009D68D7 /* webViewJSBrige.html */,
+				17A0E55C228AA21A009D68D7 /* WKWebViewJSBrige.html */,
+				17A0E560228AB627009D68D7 /* Webview.js */,
+				17A0E561228AB628009D68D7 /* WKWebView.js */,
 				1773BEA41F3ABB2000E63793 /* test.css */,
-				1773BEA51F3ABB2000E63793 /* test.html */,
-				1773BEA61F3ABB2000E63793 /* test.js */,
 				175572DD1F394D5E00155BCE /* JS_NativeBrige */,
 				175572AB1F394BC300155BCE /* AppDelegate.h */,
 				175572AC1F394BC300155BCE /* AppDelegate.m */,
@@ -227,7 +236,6 @@
 				0749C29BABFDC13CDB095B7C /* Pods-JS_NativeBrigeUITests.debug.xcconfig */,
 				899B9365B358B284E2927650 /* Pods-JS_NativeBrigeUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -348,11 +356,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1773BEA91F3ABB2000E63793 /* test.js in Resources */,
+				17A0E55D228AA21A009D68D7 /* JSBrige.html in Resources */,
+				17A0E55F228AA21A009D68D7 /* WKWebViewJSBrige.html in Resources */,
 				175572B81F394BC300155BCE /* LaunchScreen.storyboard in Resources */,
 				175572B51F394BC300155BCE /* Assets.xcassets in Resources */,
+				17A0E563228AB628009D68D7 /* WKWebView.js in Resources */,
 				175572B31F394BC300155BCE /* Main.storyboard in Resources */,
-				1773BEA81F3ABB2000E63793 /* test.html in Resources */,
+				17A0E55E228AA21A009D68D7 /* webViewJSBrige.html in Resources */,
+				17A0E562228AB628009D68D7 /* Webview.js in Resources */,
 				1773BEA71F3ABB2000E63793 /* test.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

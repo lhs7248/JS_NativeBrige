@@ -22,34 +22,36 @@
     
     LSWebViewController * WebVC = [LSWebViewController webBrowserWithConfiguration:NO];
     
-    [self pushWebVC:WebVC];
+    [self pushWebVC:WebVC fileName:@"webViewJSBrige"];
     
 }
 - (IBAction)wkWebViewAction:(id)sender {
     
     LSWebViewController * wkWebVC = [LSWebViewController webBrowserWithConfiguration:YES];
-    [self pushWebVC:wkWebVC];
+    
+    [self pushWebVC:wkWebVC fileName:@"WKWebViewJSBrige"];
 
+}
+- (IBAction)WebviewWKWebView:(id)sender {
+    LSWebViewController * WebVC = [LSWebViewController webBrowserWithConfiguration:NO];
+    
+    
+    [self pushWebVC:WebVC fileName:@"JSBrige"];
 }
 
 
--(void)pushWebVC:(LSWebViewController *)webVC{
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"test"
+-(void)pushWebVC:(LSWebViewController *)webVC fileName:(NSString *)fileName{
+ 
+    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:fileName
                                                           ofType:@"html"];
+    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
     NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
                                                     encoding:NSUTF8StringEncoding
                                                        error:nil];
+    
+    [webVC loadHTMLString:htmlCont baseURl:baseURL];
+    
 
-
-    if (self.textField.text.length == 0) {
-        
-        [webVC loadHTMLString:htmlCont baseURl:baseURL];
-    }else{
-        
-        [webVC loadURLString:self.textField.text];
-    }
     [self.navigationController pushViewController:webVC animated:YES];
     
 }
