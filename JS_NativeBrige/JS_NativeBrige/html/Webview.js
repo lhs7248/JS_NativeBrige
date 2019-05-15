@@ -12,14 +12,12 @@ function protocolURL(){
 }
 function testProtocolURL(){
   var startTimes = +new Date();
-  document.getElementById("testStartTime").innerHTML = startTimes;
-
   for (var i = 0; i < 1000; i++) {
     protocolURL();
   }
 
   var endTimes = +new Date();
-  document.getElementById("testEndTime").innerHTML = endTimes;
+  document.getElementById("testProtocolCostTime").innerHTML = (endTimes - startTimes);
 
 }
 // 显示 toast 弹窗
@@ -30,13 +28,12 @@ function jsExportToastStr(){
 }
 function testJsExportToastStr(){
     var startTimes = +new Date();
-  document.getElementById("testJSCoreStartTime").innerHTML = startTimes;
-
   for (var i = 0; i < 1000; i++) {
-    jsExportToastStr();
+    NativeFunction.showTestTost("JSExport Test Toast");
   }
+
   var endTimes = +new Date();
-  document.getElementById("testJSCoreEndTime").innerHTML = endTimes;
+  document.getElementById("testJSCoreCostTime").innerHTML = endTimes - startTimes;
 }
 
 function jsExportToastArray(){
@@ -104,8 +101,8 @@ function readFile() {
       document.getElementById("img").src       = e.target.result;
       document.getElementById("b64").innerHTML = e.target.result;
 
-      var param =  {"requireBack":false,"messageBody":{'image':e.target.result}};
-      NativeFunction.showDict(param);
+      var param =  {"requireBack":false,'image':e.target.result};
+      NativeFunction.showBigData(param);
     }); 
     
     FR.readAsDataURL( this.files[0] );
