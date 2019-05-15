@@ -100,7 +100,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     self.pluginManager = [[LSDataBrigeManger alloc] initWithWebVC:self];
 
     if (self.wkWebView) {
-        self.navigationItem.title = @"wkWebView";
+        self.navigationItem.title = @"WkWebView";
         [self.wkWebView setFrame:self.view.bounds];
         [self.wkWebView setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
                                             UIViewAutoresizingFlexibleHeight];
