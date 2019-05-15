@@ -8,7 +8,7 @@
 
 #import "LSOpenBrowerPlugin.h"
 #import <UIKit/UIKit.h>
-
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @implementation LSOpenBrowerPlugin
 
@@ -20,16 +20,21 @@
 -(void )browser:(id)browser didReceiveScriptMessage:(id)message{
     
     if ([message isKindOfClass:[NSString class]]) {
-        NSString *urlParam = (NSString *)message;
-        if (urlParam.length > 0) {
-            
-            BOOL isExsit = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlParam]];
-            if(isExsit) {
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlParam]];
-            }
-        }
+        [self showTostStr:message];
+    }else if ([message isKindOfClass:[NSArray class]] ||[message isKindOfClass:[NSDictionary class]]){
+        NSData * data =  [NSJSONSerialization dataWithJSONObject:message options:0 error:nil];
+        NSString * toast = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        [self showTostStr:toast];
     }
     
+    
+}
+
+-(void)showTostStr:(NSString *)toastStr {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SVProgressHUD showWithStatus:toastStr];
+        [SVProgressHUD dismissWithDelay:3];
+    });
 }
 
 -(id)browerCallBack:(id)browser didReceiveScriptMessage:(id)message{

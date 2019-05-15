@@ -1,73 +1,74 @@
 
 var mapCollection ={};
 
-// function getToken() {
-    
-//     const messageId = "100000000";
-//     mapCollection[messageId]= function(token){
-//         console.log(token);
-//     };
-
-//    var param =  {"requireBack":true,"method":"customFunction","messageId":messageId,"messageBody":{}};
-
-
-//    window.webkit.messageHandlers.openBrowser.postMessage(param);
-// }
-
-
-function protocolURL(){
+function protocolURL(str){
   let iframe = document.createElement('IFRAME');
-  iframe.setAttribute('src','ald://showToast?message="点我试试看"');
+  iframe.setAttribute('src',str);
   iframe.setAttribute('style','display:none');
   document.documentElement.appendChild(iframe);
   iframe.parentNode.removeChild(iframe);
   iframe = null;
 }
+function protocol(){
+  protocolURL('ald://showToast?message="点我试试看"');
+}
+
+function testProtocolURL(){
+  var startTimes = +new Date();
+  for (var i = 0; i < 1000; i++) {
+    protocolURL('ald://showToastTest?message="点我试试看"');
+  }
+
+  var endTimes = +new Date();
+  document.getElementById("testProtocolCostTime").innerHTML = (endTimes - startTimes);
+
+}
+
 
 // 显示 toast 弹窗
 function jsExportToastStr(){
 
-   var locationMessage = NativeFunction.showTost('JSExport Toast');
 
-   console.log(locationMessage);
+  var parm = 'JSExport Toast';
+  window.webkit.messageHandlers.openBrowser.postMessage(parm);
+
+  console.log(locationMessage);
 }
 function jsExportToastArray(){
 
-  var array = ["name","age","sex"]
-   var locationMessage = NativeFunction.showArray(array);
+  var parm = ["name","age","sex"];
+  window.webkit.messageHandlers.openBrowser.postMessage(parm);
 }
 function jsExportToastDict(){
 
-  var dict = {"name":"lili","age":18,"sex":'boy'}
+  var parm =  {"name":"lili","age":18,"sex":'boy'};
 
-   var locationMessage = NativeFunction.showDict(dict);
+  window.webkit.messageHandlers.openBrowser.postMessage(parm);
 }
 // 显示 toast 弹窗
 function jsExportLocation(){
+    const messageId = "100000000";
+    mapCollection[messageId]= function(result){
+      document.getElementById("location_text").innerHTML = result;
+    };
 
-  var locationMessage = NativeFunction.getCurrentLocation();
+   var param =  {"requireBack":true,"method":"customFunction","messageId":messageId,"messageBody":{}};
 
-  document.getElementById("location_text").innerHTML = locationMessage;
-   console.log(locationMessage);
+   window.webkit.messageHandlers.getToken.postMessage(param);
 }
 
 
+function testJsExportToastStr(){
+    var startTimes = +new Date();
+  for (var i = 0; i < 1000; i++) {
 
-function postMessage(){
-
-  for (var i = 0; i < 10000; i++) {
-
-    const messageId = "10" + i;
-
-    mapCollection[messageId]= function(token){
-        console.log(token);
-    };
-   var param =  {"requireBack":true,"method":"customFunction","messageId":messageId,"messageBody":{'key':'this is Post Test'}};
-
-   window.webkit.messageHandlers.openBrowser.postMessage(param);
+   window.webkit.messageHandlers.getToken.postMessage('ald://showToastTest?message="点我试试看"');
   }
 
+  var endTimes = +new Date();
+  document.getElementById("testJSCoreCostTime").innerHTML = endTimes - startTimes;
 }
+
 function promptMessage(){
 
   var name=prompt("Please enter your name","")

@@ -16,11 +16,12 @@
 
 -(void)browser:(id)browser didReceiveScriptMessage:(id)message{
    
+    NSLog(@"WKWebViewProtocol:%@",message);
     
 }
 -(id)browerCallBack:(id)browser didReceiveScriptMessage:(id)message{
    
-    return @"token";
+    return @"上海 浦电路地铁站";
 }
 
 

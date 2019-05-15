@@ -16,22 +16,29 @@
     <div  class="div-module">
         <a class="button_style"> 拦截URL</a>
         <div style="display: flex;flex-direction: row;">   
-
-            <button class="button_style" onclick = "protocolURL()">WebView拦截URL</button>               
+            <button class="button_style" onclick = "protocol()">WKWebView拦截URL</button>               
         </div>
+        <div style="display: flex;flex-direction: row;">   
+            <button class="button_style" onclick = "testProtocolURL()">WKWebView拦截URL 测试</button>        
+        </div>
+        <p id="testProtocolCostTime"></p>
     </div>
 
     <div  class="div-module">
         <a class="button_style"> postMessage</a>
         <div style="display: flex;flex-direction: row;">   
-            <button class="button_style"  onclick = "jsExportToastStr()">JSExport toast Str</button>       
-            <button class="button_style"  onclick = "jsExportToastArray()">JSExport toast Array</button>       
+            <button class="button_style"  onclick = "jsExportToastStr()">postMessage toast Str</button>       
+            <button class="button_style"  onclick = "jsExportToastArray()">postMessage toast Array</button>       
         </div>
         <div style="display: flex;flex-direction: row;">
-            <button class="button_style"  onclick = "jsExportToastDict()">JSExport toast Dict</button>       
-            <button class="button_style"  onclick = "jsExportLocation()">JSExport getMessage</button>           
+            <button class="button_style"  onclick = "jsExportToastDict()">postMessage toast Dict</button>       
+            <button class="button_style"  onclick = "jsExportLocation()">postMessage getMessage</button>           
         </div>
-              <p id="location_text"></p>
+        <div style="display: flex;flex-direction: row;">
+            <button class="button_style"  onclick = "testJsExportToastStr()">JSExport toast Str Test</button>  
+        </div>
+        <p id="testJSCoreCostTime"></p>
+        <p id="location_text"></p>
     </div>
  <!--    <div  class="div-module">
          <a class="button_style"> postMessage</a>

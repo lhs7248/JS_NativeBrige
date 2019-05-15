@@ -13,8 +13,8 @@
 #import "LSOpenBrowerPlugin.h"
 #import "LSGetUserTokenPlugin.h"
 
-
 #import "LSH5Function.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface LSDataBrigeManger()<WKScriptMessageHandler>
 
@@ -59,13 +59,37 @@
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
     id<LSBrigeProtocol> plugin = [_plugins objectForKey:message.name];
     
-    if (plugin) {
+    if ([message.name isEqualToString:@"openBrowser"]) {
+        [self dealOpenBrower:message.body];
+    }else if([message.name isEqualToString:@"getToken"] & [message.body isKindOfClass:[NSString class]]) {
+        NSLog(@"WKWebViewProtocol:%@",message);
+    }else{
         
         [self plugin:plugin messagaBoy:message.body];
-      
     }
     
 }
+
+-(void )dealOpenBrower:(id)message{
+    
+    if ([message isKindOfClass:[NSString class]]) {
+        [self showTostStr:message];
+    }else if ([message isKindOfClass:[NSArray class]] ||[message isKindOfClass:[NSDictionary class]]){
+        NSData * data =  [NSJSONSerialization dataWithJSONObject:message options:0 error:nil];
+        NSString * toast = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        [self showTostStr:toast];
+    }
+    
+    
+}
+
+-(void)showTostStr:(NSString *)toastStr {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [SVProgressHUD showWithStatus:toastStr];
+        [SVProgressHUD dismissWithDelay:3];
+    });
+}
+
 // 处理H5 页面传到Native的信息
 -(void)plugin:(id<LSBrigeProtocol>)plugin messagaBoy:(id)messageBody{
     
