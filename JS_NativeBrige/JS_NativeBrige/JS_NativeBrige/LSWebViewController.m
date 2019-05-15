@@ -203,21 +203,27 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     if (webView == self.webView) {
         if ([url.scheme isEqualToString:@"ald"]) {
             NSString * urlStr = [url resourceSpecifier];
-            NSLog(@"protocol:%@",urlStr);
-//            [self showAlert:urlStr];
+            [self showAlert:urlStr];
         }
 
     }
     return YES;
 }
 -(void)showAlert:(NSString * )urlStr {
+    if ([[[urlStr componentsSeparatedByString:@"?"] firstObject] hasSuffix:@"showToast"]) {
+        NSString * message = [[urlStr componentsSeparatedByString:@"?"] lastObject];
+        NSString * messageStr = [[message componentsSeparatedByString:@"="] lastObject];
+        NSString * decodeMessage =  [messageStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        [SVProgressHUD showWithStatus:decodeMessage];
+        [SVProgressHUD dismissWithDelay:3];
+    }else{
+        NSLog(@"protocol:%@",urlStr);
+    }
     
-    NSString * message = [[urlStr componentsSeparatedByString:@"?"] lastObject];
-    NSString * messageStr = [[message componentsSeparatedByString:@"="] lastObject];
-    NSString * decodeMessage =  [messageStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
-    [SVProgressHUD showWithStatus:decodeMessage];
-    [SVProgressHUD dismissWithDelay:3];
+    
+    
+  
 }
 
 // 网页开始加载后，注入交互方式

@@ -2,18 +2,23 @@
 var mapCollection ={};
 
 
-function protocolURL(){
+function protocolURL(str){
   let iframe = document.createElement('IFRAME');
-  iframe.setAttribute('src','ald://showToast?message="点我试试看"');
+  iframe.setAttribute('src',str);
   iframe.setAttribute('style','display:none');
   document.documentElement.appendChild(iframe);
   iframe.parentNode.removeChild(iframe);
   iframe = null;
 }
+function protocol(){
+  protocolURL('ald://showToast?message="点我试试看"');
+
+}
+
 function testProtocolURL(){
   var startTimes = +new Date();
   for (var i = 0; i < 1000; i++) {
-    protocolURL();
+    protocolURL('ald://showToastTest?message="点我试试看"');
   }
 
   var endTimes = +new Date();
