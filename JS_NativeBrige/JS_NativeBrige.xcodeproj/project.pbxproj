@@ -651,7 +651,7 @@
 			baseConfigurationReference = 3A44BF5A67C570216AF28735 /* Pods-JS_NativeBrige.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7FYG9D6WTR;
+				DEVELOPMENT_TEAM = AG434K56VG;
 				INFOPLIST_FILE = JS_NativeBrige/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -666,7 +666,7 @@
 			baseConfigurationReference = 287C832ADF630DE72AE318ED /* Pods-JS_NativeBrige.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7FYG9D6WTR;
+				DEVELOPMENT_TEAM = AG434K56VG;
 				INFOPLIST_FILE = JS_NativeBrige/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

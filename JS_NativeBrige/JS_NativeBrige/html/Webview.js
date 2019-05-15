@@ -104,7 +104,7 @@ function readFile() {
     
     FR.addEventListener("load", function(e) {
       document.getElementById("img").src       = e.target.result;
-      document.getElementById("b64").innerHTML = e.target.result;
+      // document.getElementById("b64").innerHTML = e.target.result;
 
       var param =  {"requireBack":false,'image':e.target.result};
       NativeFunction.showBigData(param);

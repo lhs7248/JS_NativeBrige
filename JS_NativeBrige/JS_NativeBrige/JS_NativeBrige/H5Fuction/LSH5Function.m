@@ -59,16 +59,19 @@
 }
 
 -(void)showBigData:(NSDictionary*)bigDict{
-    NSString * imageBase64 = bigDict[@"image"];
-    NSRange  range = [imageBase64 rangeOfString:@"data:image/jpeg;base64,"];
-    NSString * base64 = [imageBase64 substringFromIndex:range.length];
-    NSData *decodedImageData = [[NSData alloc]
-                                initWithBase64EncodedString:base64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    UIImage *decodedImage = [UIImage imageWithData:decodedImageData];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        [self showImage:decodedImage dateLenth:[NSString stringWithFormat:@"%ld",base64.length/(1024 * 1024)]];
-    });
+    @autoreleasepool {
+        NSString * imageBase64 = bigDict[@"image"];
+        NSRange  range = [imageBase64 rangeOfString:@"data:image/jpeg;base64,"];
+        NSString * base64 = [imageBase64 substringFromIndex:range.length];
+        NSData *decodedImageData = [[NSData alloc]
+                                    initWithBase64EncodedString:base64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
+        UIImage *decodedImage = [UIImage imageWithData:decodedImageData];
+        NSInteger length = base64.length/(1024 * 1024);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self showImage:decodedImage dateLenth:[NSString stringWithFormat:@"%ld",length]];
+        });
+    }
 }
 
 
@@ -95,6 +98,7 @@
 
 -(void)removeView{
     [self.view removeFromSuperview];
+    self.view = nil;
 }
 
 - (NSString *)getCurrentLocation {

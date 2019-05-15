@@ -119,7 +119,7 @@ function webViewReadFile() {
     
     FR.addEventListener("load", function(e) {
       document.getElementById("img").src       = e.target.result;
-      document.getElementById("b64").innerHTML = e.target.result;
+      // document.getElementById("b64").innerHTML = e.target.result;
 
       var param =  {"requireBack":false,"messageBody":{'image':e.target.result}};
       window.webkit.messageHandlers.getToken.postMessage(param);
