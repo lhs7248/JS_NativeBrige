@@ -25,6 +25,7 @@
 		17A0E55F228AA21A009D68D7 /* WKWebViewJSBrige.html in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E55C228AA21A009D68D7 /* WKWebViewJSBrige.html */; };
 		17A0E562228AB628009D68D7 /* Webview.js in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E560228AB627009D68D7 /* Webview.js */; };
 		17A0E563228AB628009D68D7 /* WKWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 17A0E561228AB628009D68D7 /* WKWebView.js */; };
+		17A0E566228C1439009D68D7 /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0E565228C1439009D68D7 /* WeakScriptMessageDelegate.m */; };
 		17BF36711F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */; };
 		6F25769BCD74692D43C27158 /* libPods-JS_NativeBrigeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F09CFEF05682987817B2EA /* libPods-JS_NativeBrigeUITests.a */; };
 		CCBD2F9983EA61F6750ECB35 /* libPods-JS_NativeBrigeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0804F3A1E3ACD39897373814 /* libPods-JS_NativeBrigeTests.a */; };
@@ -83,6 +84,8 @@
 		17A0E55C228AA21A009D68D7 /* WKWebViewJSBrige.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = WKWebViewJSBrige.html; path = html/WKWebViewJSBrige.html; sourceTree = "<group>"; };
 		17A0E560228AB627009D68D7 /* Webview.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Webview.js; path = html/Webview.js; sourceTree = "<group>"; };
 		17A0E561228AB628009D68D7 /* WKWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = WKWebView.js; path = html/WKWebView.js; sourceTree = "<group>"; };
+		17A0E564228C1439009D68D7 /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		17A0E565228C1439009D68D7 /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 		17BF366F1F3AA7DA0048CA57 /* LSGetUserTokenPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSGetUserTokenPlugin.h; sourceTree = "<group>"; };
 		17BF36701F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSGetUserTokenPlugin.m; sourceTree = "<group>"; };
 		287C832ADF630DE72AE318ED /* Pods-JS_NativeBrige.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JS_NativeBrige.release.xcconfig"; path = "Target Support Files/Pods-JS_NativeBrige/Pods-JS_NativeBrige.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				17997854224A0A7500A82E55 /* H5Fuction */,
 				175572DE1F394FA500155BCE /* LSWebViewController.h */,
 				175572DF1F394FA500155BCE /* LSWebViewController.m */,
+				17A0E564228C1439009D68D7 /* WeakScriptMessageDelegate.h */,
+				17A0E565228C1439009D68D7 /* WeakScriptMessageDelegate.m */,
 				175572E11F394FE200155BCE /* JS_NativeBrige */,
 				172693E71F39AA4C0081785B /* JS_NativeBrigePlugin */,
 			);
@@ -481,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17BF36711F3AA7DA0048CA57 /* LSGetUserTokenPlugin.m in Sources */,
+				17A0E566228C1439009D68D7 /* WeakScriptMessageDelegate.m in Sources */,
 				175572E01F394FA500155BCE /* LSWebViewController.m in Sources */,
 				175572B01F394BC300155BCE /* ViewController.m in Sources */,
 				17997857224A0AB100A82E55 /* LSH5Function.m in Sources */,

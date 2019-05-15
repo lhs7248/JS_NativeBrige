@@ -15,6 +15,7 @@
 
 #import "LSH5Function.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "WeakScriptMessageDelegate.h"
 
 @interface LSDataBrigeManger()<WKScriptMessageHandler>
 
@@ -134,7 +135,7 @@
     [_plugins setObject:plugin forKey:name];
     
     if (self.webVC.wkWebView) {
-        [self.webVC.wkWebView.configuration.userContentController addScriptMessageHandler:self name:[plugin scriptMessageHandlerName]];
+        [self.webVC.wkWebView.configuration.userContentController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc]initWithDelegate:self] name:[plugin scriptMessageHandlerName]];
     } else if (self.webVC.webView) {
         self.jsContext.exceptionHandler = ^(JSContext *con, JSValue *exception) {
             con.exception = exception;
