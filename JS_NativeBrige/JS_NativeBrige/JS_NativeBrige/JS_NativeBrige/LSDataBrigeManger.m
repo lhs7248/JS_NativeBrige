@@ -19,7 +19,7 @@
 
 @interface LSDataBrigeManger()<WKScriptMessageHandler>
 
-@property(nonatomic,strong)LSWebViewController  * webVC;
+@property(nonatomic,weak)LSWebViewController  * webVC;
 
 
 @property (nonatomic, strong) NSMutableDictionary *plugins;
