@@ -14,45 +14,15 @@
         <p style="font-size: 2rem;text-align: center;">测试的HTML 标签</p>
     </div>
     <div  class="div-module">
-        <a class="button_style"> 拦截URL</a>
-        <div style="display: flex;flex-direction: row;">
-            <button class="button_style" onclick = "protocolURL()">WebView拦截URL</button>               
-        </div>
-    </div>
-
-    <div  class="div-module">
-        <a class="button_style"> JSExport</a>
-        <div style="display: flex;flex-direction: row;">   
-            <button class="button_style"  onclick = "jsExportToastStr()">JSExport toast Str</button>       
-            <button class="button_style"  onclick = "jsExportToastArray()">JSExport toast Array</button>       
-        </div>
-        <div style="display: flex;flex-direction: row;">
-            <button class="button_style"  onclick = "jsExportToastDict()">JSExport toast Dict</button>       
-            <button class="button_style"  onclick = "jsExportLocation()">JSExport getMessage</button>           
-        </div>
-              <p id="location_text"></p>
-    </div>
-    <div  class="div-module">
          <a class="button_style"> postMessage</a>
          <div style="display: flex; flex-direction: row;"> 
-            <button class="button_style" onclick = "postMessage()">WKWebView postMessage</button>                
+            <button class="button_style" onclick = "jsExportLocation()">WebView postMessage</button>                
          </div>
     </div>
-<!--     <div class="div-module">
-         <a class="button_style"> prompt</a>
-        <div style="flex: 1;flex-direction: row;">
-            <button class="button_style" onclick = "promptMessage()">WKWebView prompt </button>                
-        </div>        
-    </div> -->
-
-    <div style="width: 100%;height: 20px;"></div>
-    <div>
-        <input id="inp" type='file'  style="width: 200px;height: 50px;">
-        <p id="b64"></p>
-        <img id="img" style="width: 300px;height:300px">
-    </div>
-
-<script type="text/javascript" src="./test.js"></script>
+    
+    <p id="location_text"></p>
+    <p id="WKWebViewInp"></p>
+<script type="text/javascript" src="./WKWebView.js"></script>
 </body>
 
 </html>
