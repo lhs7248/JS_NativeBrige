@@ -99,7 +99,7 @@ function WKWebViewReadFile() {
 
       var param =  {"requireBack":false,"messageBody":{'image':e.target.result}};
 
-      window.webkit.messageHandlers.openBrowser.postMessage(param);
+      window.webkit.messageHandlers.getToken.postMessage(param);
     }); 
     
     FR.readAsDataURL( this.files[0] );
@@ -109,26 +109,3 @@ function WKWebViewReadFile() {
 
 document.getElementById("WKWebViewInp").addEventListener("change", WKWebViewReadFile);
 
-
-
-function webViewReadFile() {
-  
-  if (this.files && this.files[0]) {
-    
-    var FR= new FileReader();
-    
-    FR.addEventListener("load", function(e) {
-      document.getElementById("img").src       = e.target.result;
-      // document.getElementById("b64").innerHTML = e.target.result;
-
-      var param =  {"requireBack":false,"messageBody":{'image':e.target.result}};
-      window.webkit.messageHandlers.getToken.postMessage(param);
-
-    }); 
-    
-    FR.readAsDataURL( this.files[0] );
-  }
-  
-}
-
-document.getElementById("WKWebViewInp").addEventListener("change", webViewReadFile);

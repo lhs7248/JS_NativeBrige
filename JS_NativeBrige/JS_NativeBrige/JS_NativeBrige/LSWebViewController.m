@@ -421,4 +421,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     return _closeButtonItem;
 }
 
+-(void)dealloc{
+    
+}
+
 @end
