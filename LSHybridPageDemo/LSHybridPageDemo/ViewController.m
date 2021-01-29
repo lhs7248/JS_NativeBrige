@@ -7,6 +7,8 @@
 
 #import "ViewController.h"
 
+#import <LSHybirdPage/LSHybirdPage.h>
+
 @interface ViewController ()
 
 @end
@@ -15,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    LSWKWebView * webView = [[LSWKWebView alloc]initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
+    NSString *filePath  = [[NSBundle mainBundle] pathForResource:@"map" ofType:@"html"];
+    
+    NSString *htmlString = [[NSString alloc]initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    [webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+    
+    [self.view addSubview:webView];
+    
 }
 
 

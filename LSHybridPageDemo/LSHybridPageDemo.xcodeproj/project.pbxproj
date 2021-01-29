@@ -17,6 +17,7 @@
 		17284CB825C29CA600E0D398 /* LSHybridPageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CB725C29CA600E0D398 /* LSHybridPageDemoUITests.m */; };
 		17284CDA25C29D5600E0D398 /* LSHybirdPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17284CD925C29D5600E0D398 /* LSHybirdPage.framework */; };
 		17284CDB25C29D5600E0D398 /* LSHybirdPage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17284CD925C29D5600E0D398 /* LSHybirdPage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17284D3225C2BBA900E0D398 /* map.html in Resources */ = {isa = PBXBuildFile; fileRef = 17284D3125C2BBA900E0D398 /* map.html */; };
 		2FAF2C76F669EB0DADDAB3A2 /* Pods_LSHybridPageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BE3AA558E6576FC08D6AA8 /* Pods_LSHybridPageDemo.framework */; };
 		969B5422B119B9E8B71E9A64 /* Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEE575BED99F9AE6EB7FF9D /* Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework */; };
 		FEE0C334CB50CA38A3AC77E4 /* Pods_LSHybridPageDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD79A5096E90085F1F310BF5 /* Pods_LSHybridPageDemoTests.framework */; };
@@ -72,6 +73,7 @@
 		17284CB725C29CA600E0D398 /* LSHybridPageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSHybridPageDemoUITests.m; sourceTree = "<group>"; };
 		17284CB925C29CA600E0D398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17284CD925C29D5600E0D398 /* LSHybirdPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LSHybirdPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17284D3125C2BBA900E0D398 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = map.html; path = ../../../../../../map.html; sourceTree = "<group>"; };
 		296B4B56E161AF1450996CA0 /* Pods-LSHybridPageDemo-LSHybridPageDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSHybridPageDemo-LSHybridPageDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-LSHybridPageDemo-LSHybridPageDemoUITests/Pods-LSHybridPageDemo-LSHybridPageDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		35399BE737CBDA7197071052 /* Pods-LSHybridPageDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSHybridPageDemoTests.release.xcconfig"; path = "Target Support Files/Pods-LSHybridPageDemoTests/Pods-LSHybridPageDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		9BEE575BED99F9AE6EB7FF9D /* Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 		17284C8F25C29CA400E0D398 /* LSHybridPageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				17284D3025C2BB9300E0D398 /* insertLay */,
 				17284C9025C29CA400E0D398 /* AppDelegate.h */,
 				17284C9125C29CA400E0D398 /* AppDelegate.m */,
 				17284C9625C29CA400E0D398 /* ViewController.h */,
@@ -165,6 +168,14 @@
 				17284CB925C29CA600E0D398 /* Info.plist */,
 			);
 			path = LSHybridPageDemoUITests;
+			sourceTree = "<group>";
+		};
+		17284D3025C2BB9300E0D398 /* insertLay */ = {
+			isa = PBXGroup;
+			children = (
+				17284D3125C2BBA900E0D398 /* map.html */,
+			);
+			path = insertLay;
 			sourceTree = "<group>";
 		};
 		2A165469D296E7417F3D7199 /* Frameworks */ = {
@@ -298,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17284CA025C29CA500E0D398 /* LaunchScreen.storyboard in Resources */,
+				17284D3225C2BBA900E0D398 /* map.html in Resources */,
 				17284C9D25C29CA500E0D398 /* Assets.xcassets in Resources */,
 				17284C9B25C29CA400E0D398 /* Main.storyboard in Resources */,
 			);

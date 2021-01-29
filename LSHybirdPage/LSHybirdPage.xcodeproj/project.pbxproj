@@ -12,6 +12,10 @@
 		17284C7725C29BDF00E0D398 /* LSHybirdPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 17284C6925C29BDF00E0D398 /* LSHybirdPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17284CD525C29D3B00E0D398 /* LSBrigeMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 17284CD325C29D3B00E0D398 /* LSBrigeMessage.h */; };
 		17284CD625C29D3B00E0D398 /* LSBrigeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CD425C29D3B00E0D398 /* LSBrigeMessage.m */; };
+		17284CE125C29F6E00E0D398 /* LSWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17284CDF25C29F6E00E0D398 /* LSWKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17284CE225C29F6E00E0D398 /* LSWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CE025C29F6E00E0D398 /* LSWKWebView.m */; };
+		17284CE925C29F7D00E0D398 /* LSWKMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 17284CE725C29F7D00E0D398 /* LSWKMessageHandler.h */; };
+		17284CEA25C29F7D00E0D398 /* LSWKMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CE825C29F7D00E0D398 /* LSWKMessageHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 		17284C7625C29BDF00E0D398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17284CD325C29D3B00E0D398 /* LSBrigeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBrigeMessage.h; sourceTree = "<group>"; };
 		17284CD425C29D3B00E0D398 /* LSBrigeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBrigeMessage.m; sourceTree = "<group>"; };
+		17284CDF25C29F6E00E0D398 /* LSWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSWKWebView.h; sourceTree = "<group>"; };
+		17284CE025C29F6E00E0D398 /* LSWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSWKWebView.m; sourceTree = "<group>"; };
+		17284CE725C29F7D00E0D398 /* LSWKMessageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSWKMessageHandler.h; sourceTree = "<group>"; };
+		17284CE825C29F7D00E0D398 /* LSWKMessageHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSWKMessageHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +83,13 @@
 		17284C6825C29BDF00E0D398 /* LSHybirdPage */ = {
 			isa = PBXGroup;
 			children = (
+				17284C6925C29BDF00E0D398 /* LSHybirdPage.h */,
+				17284CDF25C29F6E00E0D398 /* LSWKWebView.h */,
+				17284CE025C29F6E00E0D398 /* LSWKWebView.m */,
+				17284CE725C29F7D00E0D398 /* LSWKMessageHandler.h */,
+				17284CE825C29F7D00E0D398 /* LSWKMessageHandler.m */,
 				17284CD325C29D3B00E0D398 /* LSBrigeMessage.h */,
 				17284CD425C29D3B00E0D398 /* LSBrigeMessage.m */,
-				17284C6925C29BDF00E0D398 /* LSHybirdPage.h */,
 				17284C6A25C29BDF00E0D398 /* Info.plist */,
 			);
 			path = LSHybirdPage;
@@ -101,6 +113,8 @@
 			files = (
 				17284C7725C29BDF00E0D398 /* LSHybirdPage.h in Headers */,
 				17284CD525C29D3B00E0D398 /* LSBrigeMessage.h in Headers */,
+				17284CE925C29F7D00E0D398 /* LSWKMessageHandler.h in Headers */,
+				17284CE125C29F6E00E0D398 /* LSWKWebView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17284CEA25C29F7D00E0D398 /* LSWKMessageHandler.m in Sources */,
+				17284CE225C29F6E00E0D398 /* LSWKWebView.m in Sources */,
 				17284CD625C29D3B00E0D398 /* LSBrigeMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
