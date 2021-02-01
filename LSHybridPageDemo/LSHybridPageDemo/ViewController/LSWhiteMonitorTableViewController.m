@@ -9,6 +9,8 @@
 
 @interface LSWhiteMonitorTableViewController ()
 
+@property (nonatomic,strong) NSArray * dataSource;
+
 @end
 
 @implementation LSWhiteMonitorTableViewController
@@ -16,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.dataSource = @[@"白屏",@"性能数据采集"];
 }
 
 #pragma mark - Table view data source
@@ -27,7 +30,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 1;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,7 +39,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"whiteMonitorCell"];
     }
     
-    cell.textLabel.text = @"同屏";
+    cell.textLabel.text = self.dataSource[indexPath.row];
     
     return cell;
 }

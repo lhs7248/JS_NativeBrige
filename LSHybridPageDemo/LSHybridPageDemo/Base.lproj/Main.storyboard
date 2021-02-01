@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="-946" y="-479"/>
         </scene>
-        <!--白屏监控-->
+        <!--Hybrid性能监控-->
         <scene sceneID="xkA-dC-Vuz">
             <objects>
                 <tableViewController id="YNK-gq-RTh" customClass="LSWhiteMonitorTableViewController" sceneMemberID="viewController">
@@ -95,17 +95,17 @@
                             <outlet property="delegate" destination="YNK-gq-RTh" id="Ebg-WO-Ugq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="白屏监控" id="nD4-zy-QCD"/>
+                    <navigationItem key="navigationItem" title="Hybrid性能监控" id="nD4-zy-QCD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayL-QX-GDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="196" y="220"/>
         </scene>
-        <!--白屏监控-->
+        <!--性能监控-->
         <scene sceneID="FZT-bu-cyi">
             <objects>
                 <navigationController id="NJf-O7-kdH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="白屏监控" id="lEz-XR-Br7"/>
+                    <tabBarItem key="tabBarItem" title="性能监控" id="lEz-XR-Br7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s2V-0u-eTS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

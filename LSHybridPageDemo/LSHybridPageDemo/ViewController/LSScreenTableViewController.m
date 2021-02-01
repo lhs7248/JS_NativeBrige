@@ -57,7 +57,7 @@
     
     
     
-    [self.navigationController pushViewController:screenView animated:NO];
+    [self.navigationController pushViewController:screenView animated:YES];
 }
 
 /*
