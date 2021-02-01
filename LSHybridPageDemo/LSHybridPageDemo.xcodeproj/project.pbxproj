@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17284C9225C29CA400E0D398 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284C9125C29CA400E0D398 /* AppDelegate.m */; };
-		17284C9825C29CA400E0D398 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284C9725C29CA400E0D398 /* ViewController.m */; };
+		17284C9825C29CA400E0D398 /* LSScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284C9725C29CA400E0D398 /* LSScreenViewController.m */; };
 		17284C9B25C29CA400E0D398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17284C9925C29CA400E0D398 /* Main.storyboard */; };
 		17284C9D25C29CA500E0D398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17284C9C25C29CA500E0D398 /* Assets.xcassets */; };
 		17284CA025C29CA500E0D398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17284C9E25C29CA500E0D398 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,9 @@
 		17284CB825C29CA600E0D398 /* LSHybridPageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CB725C29CA600E0D398 /* LSHybridPageDemoUITests.m */; };
 		17284CDA25C29D5600E0D398 /* LSHybirdPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17284CD925C29D5600E0D398 /* LSHybirdPage.framework */; };
 		17284CDB25C29D5600E0D398 /* LSHybirdPage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17284CD925C29D5600E0D398 /* LSHybirdPage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		178DC7DC25C7DB4000748B55 /* LSScreenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178DC7DB25C7DB4000748B55 /* LSScreenTableViewController.m */; };
 		17E52C4A25C3E101003D9C85 /* map.html in Resources */ = {isa = PBXBuildFile; fileRef = 17E52C4925C3E101003D9C85 /* map.html */; };
+		17E52C7725C7D86A003D9C85 /* LSWhiteMonitorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E52C7625C7D86A003D9C85 /* LSWhiteMonitorTableViewController.m */; };
 		2FAF2C76F669EB0DADDAB3A2 /* Pods_LSHybridPageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BE3AA558E6576FC08D6AA8 /* Pods_LSHybridPageDemo.framework */; };
 		969B5422B119B9E8B71E9A64 /* Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEE575BED99F9AE6EB7FF9D /* Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework */; };
 		FEE0C334CB50CA38A3AC77E4 /* Pods_LSHybridPageDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD79A5096E90085F1F310BF5 /* Pods_LSHybridPageDemoTests.framework */; };
@@ -59,8 +61,8 @@
 		17284C8D25C29CA400E0D398 /* LSHybridPageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSHybridPageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17284C9025C29CA400E0D398 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17284C9125C29CA400E0D398 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		17284C9625C29CA400E0D398 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		17284C9725C29CA400E0D398 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		17284C9625C29CA400E0D398 /* LSScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSScreenViewController.h; sourceTree = "<group>"; };
+		17284C9725C29CA400E0D398 /* LSScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSScreenViewController.m; sourceTree = "<group>"; };
 		17284C9A25C29CA400E0D398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17284C9C25C29CA500E0D398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17284C9F25C29CA500E0D398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +75,11 @@
 		17284CB725C29CA600E0D398 /* LSHybridPageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSHybridPageDemoUITests.m; sourceTree = "<group>"; };
 		17284CB925C29CA600E0D398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17284CD925C29D5600E0D398 /* LSHybirdPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LSHybirdPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		178DC7DA25C7DB4000748B55 /* LSScreenTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSScreenTableViewController.h; sourceTree = "<group>"; };
+		178DC7DB25C7DB4000748B55 /* LSScreenTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSScreenTableViewController.m; sourceTree = "<group>"; };
 		17E52C4925C3E101003D9C85 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
+		17E52C7525C7D86A003D9C85 /* LSWhiteMonitorTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSWhiteMonitorTableViewController.h; sourceTree = "<group>"; };
+		17E52C7625C7D86A003D9C85 /* LSWhiteMonitorTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSWhiteMonitorTableViewController.m; sourceTree = "<group>"; };
 		296B4B56E161AF1450996CA0 /* Pods-LSHybridPageDemo-LSHybridPageDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSHybridPageDemo-LSHybridPageDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-LSHybridPageDemo-LSHybridPageDemoUITests/Pods-LSHybridPageDemo-LSHybridPageDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		35399BE737CBDA7197071052 /* Pods-LSHybridPageDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSHybridPageDemoTests.release.xcconfig"; path = "Target Support Files/Pods-LSHybridPageDemoTests/Pods-LSHybridPageDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		9BEE575BED99F9AE6EB7FF9D /* Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,11 +144,10 @@
 		17284C8F25C29CA400E0D398 /* LSHybridPageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				178DC7D725C7DB2400748B55 /* ViewController */,
 				17284D3025C2BB9300E0D398 /* insertLay */,
 				17284C9025C29CA400E0D398 /* AppDelegate.h */,
 				17284C9125C29CA400E0D398 /* AppDelegate.m */,
-				17284C9625C29CA400E0D398 /* ViewController.h */,
-				17284C9725C29CA400E0D398 /* ViewController.m */,
 				17284C9925C29CA400E0D398 /* Main.storyboard */,
 				17284C9C25C29CA500E0D398 /* Assets.xcassets */,
 				17284C9E25C29CA500E0D398 /* LaunchScreen.storyboard */,
@@ -176,6 +181,19 @@
 				17E52C4925C3E101003D9C85 /* map.html */,
 			);
 			path = insertLay;
+			sourceTree = "<group>";
+		};
+		178DC7D725C7DB2400748B55 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17E52C7525C7D86A003D9C85 /* LSWhiteMonitorTableViewController.h */,
+				17E52C7625C7D86A003D9C85 /* LSWhiteMonitorTableViewController.m */,
+				17284C9625C29CA400E0D398 /* LSScreenViewController.h */,
+				17284C9725C29CA400E0D398 /* LSScreenViewController.m */,
+				178DC7DA25C7DB4000748B55 /* LSScreenTableViewController.h */,
+				178DC7DB25C7DB4000748B55 /* LSScreenTableViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2A165469D296E7417F3D7199 /* Frameworks */ = {
@@ -405,7 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17284C9825C29CA400E0D398 /* ViewController.m in Sources */,
+				17284C9825C29CA400E0D398 /* LSScreenViewController.m in Sources */,
+				178DC7DC25C7DB4000748B55 /* LSScreenTableViewController.m in Sources */,
+				17E52C7725C7D86A003D9C85 /* LSWhiteMonitorTableViewController.m in Sources */,
 				17284C9225C29CA400E0D398 /* AppDelegate.m in Sources */,
 				17284CA325C29CA500E0D398 /* main.m in Sources */,
 			);
@@ -580,16 +600,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7FYG9D6WTR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = AG434K56VG;
 				INFOPLIST_FILE = LSHybridPageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lhs7248.LSHybridPageDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platform.koudaiPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = koudaiPush;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -600,16 +622,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7FYG9D6WTR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = AG434K56VG;
 				INFOPLIST_FILE = LSHybridPageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lhs7248.LSHybridPageDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.platform.koudaiPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = koudaiPush;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

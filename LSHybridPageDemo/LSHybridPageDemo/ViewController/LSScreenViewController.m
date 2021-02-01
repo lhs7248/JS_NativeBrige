@@ -5,15 +5,15 @@
 //  Created by lhs7248 on 2021/1/28.
 //
 
-#import "ViewController.h"
+#import "LSScreenViewController.h"
 
 #import <LSHybirdPage/LSHybirdPage.h>
 
-@interface ViewController ()
+@interface LSScreenViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LSScreenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
