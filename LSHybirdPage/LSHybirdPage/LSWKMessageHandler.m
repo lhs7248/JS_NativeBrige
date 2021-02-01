@@ -6,6 +6,9 @@
 //
 
 #import "LSWKMessageHandler.h"
+#import "LSMapViewPlugin.h"
+
+
 
 @implementation LSWKMessageHandler
 
@@ -13,25 +16,32 @@
 {
     NSDictionary *parameter = message.body;
     if([message.name isEqualToString:@"insertLayer"]){
-        [self findChildView:[message.webView subviews] tagId:parameter[@"tagId"] src:parameter[@"src"]];
+      
+        [self findChildView:[message.webView subviews] tagId:parameter[@"tagId"] src:parameter[@"src"] callBack:^(UIScrollView *targetView) {
+            
+            [LSMapViewPlugin inserWebView:message.webView targetView:targetView params:parameter];
+            
+        }];
     }
     
 }
 
 
 
-- (void)findChildView:(NSArray *)list tagId: (NSNumber *)tagId src:(NSString *)src {
+- (void)findChildView:(NSArray *)list tagId: (NSNumber *)tagId src:(NSString *)src callBack:(void(^)(UIScrollView * targetView))callBack{
     for (int i = 0; i < [list count]; i++) {
         UIView *obj = list[i];
-        NSLog(@"%@", [obj class]);
         if ([[NSString stringWithFormat:@"%@", [obj class]] isEqualToString:@"WKChildScrollView"] && tagId.doubleValue == obj.bounds.size.height) {
+            NSLog(@"%@", [obj class]);
             UIScrollView * scroll = (UIScrollView *)obj;
             scroll.scrollEnabled = NO;
+            scroll.showsVerticalScrollIndicator = NO;
+            scroll.showsHorizontalScrollIndicator = NO;
             [scroll setCanCancelContentTouches:NO];
-            
-            
+            callBack(scroll);
+
         } else if ([obj isKindOfClass:[UIView class]]) {
-            [self findChildView: [obj subviews] tagId:tagId src:src];
+            [self findChildView:[obj subviews] tagId:tagId src:src callBack:callBack];
         }
     }
     

@@ -16,6 +16,12 @@
 		17284CE225C29F6E00E0D398 /* LSWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CE025C29F6E00E0D398 /* LSWKWebView.m */; };
 		17284CE925C29F7D00E0D398 /* LSWKMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 17284CE725C29F7D00E0D398 /* LSWKMessageHandler.h */; };
 		17284CEA25C29F7D00E0D398 /* LSWKMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CE825C29F7D00E0D398 /* LSWKMessageHandler.m */; };
+		17284D4725C3B19200E0D398 /* LSMapViewPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 17284D4525C3B19200E0D398 /* LSMapViewPlugin.h */; };
+		17284D4825C3B19200E0D398 /* LSMapViewPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284D4625C3B19200E0D398 /* LSMapViewPlugin.m */; };
+		17E52C4F25C3E160003D9C85 /* LSCameraPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E52C4D25C3E160003D9C85 /* LSCameraPlugin.h */; };
+		17E52C5025C3E160003D9C85 /* LSCameraPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E52C4E25C3E160003D9C85 /* LSCameraPlugin.m */; };
+		17E52C5525C3E1C0003D9C85 /* LSVideoPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E52C5325C3E1C0003D9C85 /* LSVideoPlugin.h */; };
+		17E52C5625C3E1C0003D9C85 /* LSVideoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E52C5425C3E1C0003D9C85 /* LSVideoPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,12 @@
 		17284CE025C29F6E00E0D398 /* LSWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSWKWebView.m; sourceTree = "<group>"; };
 		17284CE725C29F7D00E0D398 /* LSWKMessageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSWKMessageHandler.h; sourceTree = "<group>"; };
 		17284CE825C29F7D00E0D398 /* LSWKMessageHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSWKMessageHandler.m; sourceTree = "<group>"; };
+		17284D4525C3B19200E0D398 /* LSMapViewPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSMapViewPlugin.h; sourceTree = "<group>"; };
+		17284D4625C3B19200E0D398 /* LSMapViewPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSMapViewPlugin.m; sourceTree = "<group>"; };
+		17E52C4D25C3E160003D9C85 /* LSCameraPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCameraPlugin.h; sourceTree = "<group>"; };
+		17E52C4E25C3E160003D9C85 /* LSCameraPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCameraPlugin.m; sourceTree = "<group>"; };
+		17E52C5325C3E1C0003D9C85 /* LSVideoPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSVideoPlugin.h; sourceTree = "<group>"; };
+		17E52C5425C3E1C0003D9C85 /* LSVideoPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSVideoPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 		17284C6825C29BDF00E0D398 /* LSHybirdPage */ = {
 			isa = PBXGroup;
 			children = (
+				17284D3A25C3B15000E0D398 /* Views */,
 				17284C6925C29BDF00E0D398 /* LSHybirdPage.h */,
 				17284CDF25C29F6E00E0D398 /* LSWKWebView.h */,
 				17284CE025C29F6E00E0D398 /* LSWKWebView.m */,
@@ -104,6 +117,19 @@
 			path = LSHybirdPageTests;
 			sourceTree = "<group>";
 		};
+		17284D3A25C3B15000E0D398 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17284D4525C3B19200E0D398 /* LSMapViewPlugin.h */,
+				17284D4625C3B19200E0D398 /* LSMapViewPlugin.m */,
+				17E52C4D25C3E160003D9C85 /* LSCameraPlugin.h */,
+				17E52C4E25C3E160003D9C85 /* LSCameraPlugin.m */,
+				17E52C5325C3E1C0003D9C85 /* LSVideoPlugin.h */,
+				17E52C5425C3E1C0003D9C85 /* LSVideoPlugin.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -114,7 +140,10 @@
 				17284C7725C29BDF00E0D398 /* LSHybirdPage.h in Headers */,
 				17284CD525C29D3B00E0D398 /* LSBrigeMessage.h in Headers */,
 				17284CE925C29F7D00E0D398 /* LSWKMessageHandler.h in Headers */,
+				17E52C5525C3E1C0003D9C85 /* LSVideoPlugin.h in Headers */,
+				17284D4725C3B19200E0D398 /* LSMapViewPlugin.h in Headers */,
 				17284CE125C29F6E00E0D398 /* LSWKWebView.h in Headers */,
+				17E52C4F25C3E160003D9C85 /* LSCameraPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				17284CEA25C29F7D00E0D398 /* LSWKMessageHandler.m in Sources */,
+				17E52C5625C3E1C0003D9C85 /* LSVideoPlugin.m in Sources */,
 				17284CE225C29F6E00E0D398 /* LSWKWebView.m in Sources */,
+				17E52C5025C3E160003D9C85 /* LSCameraPlugin.m in Sources */,
 				17284CD625C29D3B00E0D398 /* LSBrigeMessage.m in Sources */,
+				17284D4825C3B19200E0D398 /* LSMapViewPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
