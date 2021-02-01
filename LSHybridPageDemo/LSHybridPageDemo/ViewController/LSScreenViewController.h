@@ -13,5 +13,8 @@
 /// 当前加载的URL
 @property (nonatomic , copy) NSString * urlPath;
 
+/// 当前加载的标题
+@property (nonatomic , copy) NSString * title;
+
 @end
 

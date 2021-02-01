@@ -38,23 +38,23 @@
             }
             connectedCallback() {
                 // 不延时OC那边就找不到 WKChildScrollView 估计是没渲染好
-                // setTimeout(() => {
-                //     window.webkit.messageHandlers.insertLayer.postMessage({
-                //         tagId: 301,
-                //         src: this.getAttribute('src')
-                //     });
-                // }, 300);
+                setTimeout(() => {
+                    window.webkit.messageHandlers.insertLayer.postMessage({
+                        tagId: 301,
+                        src: this.getAttribute('src')
+                    });
+                }, 300);
             }
         }
         window.customElements.define('ui-mapview', UIMapView);
 
-        document.addEventListener('DOMContentLoaded',function(){
-            window.webkit.messageHandlers.insertLayer.postMessage({
-                       tagId: 301,
-                       src: 'DOMContentLoaded'
-                   });
-            console.log('3 seconds passed');
-        });
+        // document.addEventListener('DOMContentLoaded',function(){
+        //     window.webkit.messageHandlers.insertLayer.postMessage({
+        //                tagId: 301,
+        //                src: 'DOMContentLoaded'
+        //            });
+        //     console.log('3 seconds passed');
+        // });
 
         // document.addEventListener('DOMContentLoaded', function () {
              // window.webkit.messageHandlers.insertLayer.postMessage({

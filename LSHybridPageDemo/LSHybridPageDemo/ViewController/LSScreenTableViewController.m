@@ -51,7 +51,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    LSScreenViewController * screenView = [[LSScreenViewController alloc]init];
+    LSScreenViewController * screenView = [[LSScreenViewController alloc] init];
+    screenView.urlPath = @"";
+    screenView.title = self.dataSource[indexPath.row];
+    
     
     
     [self.navigationController pushViewController:screenView animated:NO];

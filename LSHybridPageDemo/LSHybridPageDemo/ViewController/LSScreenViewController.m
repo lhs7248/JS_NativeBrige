@@ -16,8 +16,12 @@
 @implementation LSScreenViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    LSWKWebView * webView = [[LSWKWebView alloc]initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
+    
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    LSWKWebView * webView = [[LSWKWebView alloc]initWithFrame:CGRectMake(0, 80, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
     NSString *filePath  = [[NSBundle mainBundle] pathForResource:@"map" ofType:@"html"];
     
     NSString *htmlString = [[NSString alloc]initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
