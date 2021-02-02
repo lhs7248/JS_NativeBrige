@@ -14,7 +14,7 @@
 + (void)inserWebView:(WKWebView *)webView targetView:(UIScrollView *)targetView params:(NSDictionary *)params{
     
     MKMapView * mapview = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 301)];
-    mapview.mapType = MKMapTypeHybrid;
+//    mapview.mapType = MKMapTypeHybrid;
     [targetView addSubview:mapview];
     
 }

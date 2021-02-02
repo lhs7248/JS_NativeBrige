@@ -16,11 +16,12 @@
 {
     NSDictionary *parameter = message.body;
     if([message.name isEqualToString:@"insertLayer"]){
+        
       
         [self findChildView:[message.webView subviews] tagId:parameter[@"tagId"] src:parameter[@"src"] callBack:^(UIScrollView *targetView) {
-            
+
             [LSMapViewPlugin inserWebView:message.webView targetView:targetView params:parameter];
-            
+
         }];
     }
     

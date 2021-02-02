@@ -15,8 +15,7 @@
 		17284CA325C29CA500E0D398 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CA225C29CA500E0D398 /* main.m */; };
 		17284CAD25C29CA600E0D398 /* LSHybridPageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CAC25C29CA600E0D398 /* LSHybridPageDemoTests.m */; };
 		17284CB825C29CA600E0D398 /* LSHybridPageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17284CB725C29CA600E0D398 /* LSHybridPageDemoUITests.m */; };
-		17284CDA25C29D5600E0D398 /* LSHybirdPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17284CD925C29D5600E0D398 /* LSHybirdPage.framework */; };
-		17284CDB25C29D5600E0D398 /* LSHybirdPage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17284CD925C29D5600E0D398 /* LSHybirdPage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		175D40CF25C8E17D00F7CA20 /* LSHybirdPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175D40CE25C8E17D00F7CA20 /* LSHybirdPage.framework */; };
 		178DC7DC25C7DB4000748B55 /* LSScreenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178DC7DB25C7DB4000748B55 /* LSScreenTableViewController.m */; };
 		17E52C4A25C3E101003D9C85 /* map.html in Resources */ = {isa = PBXBuildFile; fileRef = 17E52C4925C3E101003D9C85 /* map.html */; };
 		17E52C7725C7D86A003D9C85 /* LSWhiteMonitorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E52C7625C7D86A003D9C85 /* LSWhiteMonitorTableViewController.m */; };
@@ -49,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				17284CDB25C29D5600E0D398 /* LSHybirdPage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +73,7 @@
 		17284CB725C29CA600E0D398 /* LSHybridPageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSHybridPageDemoUITests.m; sourceTree = "<group>"; };
 		17284CB925C29CA600E0D398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17284CD925C29D5600E0D398 /* LSHybirdPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LSHybirdPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175D40CE25C8E17D00F7CA20 /* LSHybirdPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LSHybirdPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		178DC7DA25C7DB4000748B55 /* LSScreenTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSScreenTableViewController.h; sourceTree = "<group>"; };
 		178DC7DB25C7DB4000748B55 /* LSScreenTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSScreenTableViewController.m; sourceTree = "<group>"; };
 		17E52C4925C3E101003D9C85 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
@@ -95,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17284CDA25C29D5600E0D398 /* LSHybirdPage.framework in Frameworks */,
+				175D40CF25C8E17D00F7CA20 /* LSHybirdPage.framework in Frameworks */,
 				2FAF2C76F669EB0DADDAB3A2 /* Pods_LSHybridPageDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +198,7 @@
 		2A165469D296E7417F3D7199 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				175D40CE25C8E17D00F7CA20 /* LSHybirdPage.framework */,
 				17284CD925C29D5600E0D398 /* LSHybirdPage.framework */,
 				E5BE3AA558E6576FC08D6AA8 /* Pods_LSHybridPageDemo.framework */,
 				9BEE575BED99F9AE6EB7FF9D /* Pods_LSHybridPageDemo_LSHybridPageDemoUITests.framework */,
@@ -232,6 +232,7 @@
 				17284C8A25C29CA400E0D398 /* Frameworks */,
 				17284C8B25C29CA400E0D398 /* Resources */,
 				17284CDC25C29D5600E0D398 /* Embed Frameworks */,
+				1F4FB2757A7F7911472C7EE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +270,7 @@
 				17284CAF25C29CA600E0D398 /* Sources */,
 				17284CB025C29CA600E0D398 /* Frameworks */,
 				17284CB125C29CA600E0D398 /* Resources */,
+				146CFE4CF57B684B999F9C83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,6 +374,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		146CFE4CF57B684B999F9C83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LSHybridPageDemo-LSHybridPageDemoUITests/Pods-LSHybridPageDemo-LSHybridPageDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LSHybridPageDemo-LSHybridPageDemoUITests/Pods-LSHybridPageDemo-LSHybridPageDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LSHybridPageDemo-LSHybridPageDemoUITests/Pods-LSHybridPageDemo-LSHybridPageDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1A8991BC6EFA8C1D3B1A5713 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +411,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F4FB2757A7F7911472C7EE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LSHybridPageDemo/Pods-LSHybridPageDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LSHybridPageDemo/Pods-LSHybridPageDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LSHybridPageDemo/Pods-LSHybridPageDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A3FA60296B5E17353FDD4C6 /* [CP] Check Pods Manifest.lock */ = {
